@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw7owf1ei3mvn"]
+
+[ext_resource type="Texture2D" uid="uid://dwuko7s1vospb" path="res://Assets/Sprites/UI/misc_menu/Square_container_small.png" id="1_47vgt"]
+[ext_resource type="Script" uid="uid://be6bn8k2gmi6h" path="res://Scenes/Gameplay/healing_rune_panel.gd" id="1_c3g1p"]
+[ext_resource type="Texture2D" uid="uid://de88vf61epq3f" path="res://Assets/Sprites/UI/misc_menu/Healing_Rune.png" id="2_c3g1p"]
+[ext_resource type="FontFile" uid="uid://d3141f31fy1qx" path="res://Assets/Fonts/windows_command_prompt.ttf" id="3_fooi8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkr4j"]
+texture = ExtResource("1_47vgt")
+
+[node name="HealingRune Panel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c3g1p")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tkr4j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(19, 19)
+scale = Vector2(2, 2)
+texture = ExtResource("2_c3g1p")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 25.0
+offset_right = 36.0
+offset_bottom = 39.0
+scale = Vector2(0.75, 0.75)
+theme_override_colors/font_color = Color(100, 100, 100, 1)
+theme_override_fonts/font = ExtResource("3_fooi8")
+theme_override_font_sizes/font_size = 16
+text = "2"

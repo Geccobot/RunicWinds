@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc3q6u6dtphdc"]
+
+[ext_resource type="Texture2D" uid="uid://hh623dmpbjbf" path="res://Assets/Sprites/Green Veil/Environment/Fort.png" id="1_k5ymo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frw8t"]
+atlas = ExtResource("1_k5ymo")
+region = Rect2(0, 0, 211, 142)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frw8t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fort" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(5.96046e-08, -136)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-21, 41, -41, 38, -64, 29, -64, -25, 64, -26, 64, 28, 51, 37, 22, 41, 22, 17, 11, 6, -11, 6, -21, 17)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-200, 0)
+polygon = PackedVector2Array(-21, 41, -41, 38, -64, 29, -64, -25, 64, -26, 64, 28, 51, 37, 22, 41)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(200, 0)
+polygon = PackedVector2Array(-21, 41, -41, 38, -64, 29, -64, -25, 64, -26, 64, 28, 51, 37, 22, 41)

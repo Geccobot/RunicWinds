@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxxw48eqo48jc"]
+
+[ext_resource type="Texture2D" uid="uid://dkridwjrpl6rg" path="res://Assets/Sprites/Green Veil/Environment/Buildings-2.png" id="1_xof2g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xof2g"]
+atlas = ExtResource("1_xof2g")
+region = Rect2(64, 192, 256, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xof2g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(3, 137)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(-2, -12)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-34, 60, -34, -11, -107, -12, -125, -3, -135, 12, -139, 29, -143, 43, -159, 50, -237, 49, -254, 33, -254, -136, -1, -136, -1, -139, -257, -139, -256, 101, -235, 115, -157, 115, -140, 104, -130, 80, -120, 65, -104, 58, -35, 60)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-5, -1)
+scale = Vector2(-1, 1)
+polygon = PackedVector2Array(-34, 60, -34, -11, -107, -12, -125, -3, -135, 12, -139, 29, -143, 43, -159, 50, -237, 49, -254, 33, -254, -136, -1, -136, -1, -139, -257, -139, -256, 101, -235, 115, -157, 115, -140, 104, -130, 80, -120, 65, -104, 58, -35, 60)

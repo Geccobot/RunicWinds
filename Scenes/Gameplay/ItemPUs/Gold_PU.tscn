@@ -1,0 +1,92 @@
+[gd_scene load_steps=12 format=3 uid="uid://cptrxq30oimcd"]
+
+[ext_resource type="Script" uid="uid://vqlhta5id8q7" path="res://Scenes/Gameplay/ItemPUs/gold_pu.gd" id="1_1a1j8"]
+[ext_resource type="Texture2D" uid="uid://ckj870djvyaog" path="res://Assets/Sprites/UI/Inventory_Menu/Gold.png" id="2_al0nu"]
+[ext_resource type="AudioStream" uid="uid://oy52uppd4u6f" path="res://Assets/music/GamePlaySFX/ItemPUs/coin-donation-3-181411.mp3" id="3_ol50x"]
+
+[sub_resource type="Gradient" id="Gradient_upjjo"]
+colors = PackedColorArray(1, 1, 1, 0.989, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nht3x"]
+gradient = SubResource("Gradient_upjjo")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.762195, 0.219512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp8yx"]
+atlas = ExtResource("2_al0nu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfbih"]
+atlas = ExtResource("2_al0nu")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w626g"]
+atlas = ExtResource("2_al0nu")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88luw"]
+atlas = ExtResource("2_al0nu")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"picked_up",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp8yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfbih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w626g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88luw")
+}],
+"loop": true,
+"name": &"ready",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rcpol"]
+radius = 18.0
+height = 36.0
+
+[node name="GoldPU" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_1a1j8")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 0.929412, 0.0941176, 1)
+energy = 0.5
+texture = SubResource("GradientTexture2D_nht3x")
+
+[node name="GoldPU" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+animation = &"picked_up"
+autoplay = "ready"
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_rcpol")
+debug_color = Color(0.626708, 0.531333, 7.70092e-07, 0.42)
+
+[node name="pickupSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ol50x")
+
+[connection signal="animation_finished" from="GoldPU" to="." method="_on_large_chest_animation_finished"]
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]
+[connection signal="body_exited" from="interactable_area" to="." method="_on_interactable_area_body_exited"]
+[connection signal="finished" from="pickupSFX" to="." method="_on_pickup_sfx_finished"]

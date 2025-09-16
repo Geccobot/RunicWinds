@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvibgm0jjhtt0"]
+
+[ext_resource type="Texture2D" uid="uid://0mpbeb63bf48" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_items.png" id="1_cnsyb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnsyb"]
+atlas = ExtResource("1_cnsyb")
+region = Rect2(0, 86, 32, 43)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix1u5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnsyb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvsj0"]
+size = Vector2(21.3333, 28)
+
+[node name="GV_bed" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -11)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, 23)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ix1u5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 33)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_kvsj0")

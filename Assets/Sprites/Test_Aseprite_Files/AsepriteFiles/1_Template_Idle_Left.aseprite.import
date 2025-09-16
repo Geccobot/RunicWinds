@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c1jxv0fyb8utf"
+path="res://.godot/imported/1_Template_Idle_Left.aseprite-1d9d2f68708fe1905c3a1b7a378b59ef.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/Test_Aseprite_Files/AsepriteFiles/1_Template_Idle_Left.aseprite"
+dest_files=["res://.godot/imported/1_Template_Idle_Left.aseprite-1d9d2f68708fe1905c3a1b7a378b59ef.res"]
+
+[params]
+

@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://d26tphpeukb08"]
+
+[ext_resource type="Texture2D" uid="uid://dcp3djds2ukti" path="res://Assets/Sprites/Green Veil/Environment/Buildings.png" id="1_vp45l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vp45l"]
+atlas = ExtResource("1_vp45l")
+region = Rect2(402, 229, 156, 91)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vp45l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2emx"]
+size = Vector2(148.75, 45.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ahw2"]
+size = Vector2(33, 37.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_710xa"]
+size = Vector2(48.5, 42)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(5.96046e-08, -94)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-91, -28.375)
+shape = SubResource("RectangleShape2D_u2emx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(86.375, -28)
+shape = SubResource("RectangleShape2D_u2emx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1.625, -35)
+shape = SubResource("RectangleShape2D_5ahw2")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-37.625, -2)
+shape = SubResource("RectangleShape2D_710xa")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(34.125, -2)
+shape = SubResource("RectangleShape2D_710xa")

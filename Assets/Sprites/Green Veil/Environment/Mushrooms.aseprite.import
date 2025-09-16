@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://nxyw8xj33h67"
+path="res://.godot/imported/Mushrooms.aseprite-2e9eb8f2bbea21bfea60197d448d6085.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/Green Veil/Environment/Mushrooms.aseprite"
+dest_files=["res://.godot/imported/Mushrooms.aseprite-2e9eb8f2bbea21bfea60197d448d6085.res"]
+
+[params]
+

@@ -1,0 +1,103 @@
+[gd_scene load_steps=12 format=3 uid="uid://cu6i6225dwxgf"]
+
+[ext_resource type="Texture2D" uid="uid://cpw7if73tkysb" path="res://Assets/Sprites/UI/HUD_Status_Panel.png" id="1_sernb"]
+[ext_resource type="PackedScene" uid="uid://d28d6a6kv8ai1" path="res://Scenes/UI_Scenes/health_bar.tscn" id="2_jr5sh"]
+[ext_resource type="Script" uid="uid://cmc0uysjhhxbl" path="res://Scenes/UI_Scenes/hud_panel.gd" id="2_o1k6b"]
+[ext_resource type="PackedScene" uid="uid://c5ihu8ioxrntn" path="res://Scenes/UI_Scenes/StaminaBar.tscn" id="3_jr5sh"]
+[ext_resource type="Texture2D" uid="uid://x8li64fi8e3c" path="res://Assets/Sprites/UI/misc_menu/RunePanel.png" id="4_qqq1t"]
+[ext_resource type="PackedScene" uid="uid://cwtgqswo1k6am" path="res://Scenes/UI_Scenes/ManaBar.tscn" id="5_o1k6b"]
+[ext_resource type="PackedScene" uid="uid://cw7owf1ei3mvn" path="res://Scenes/UI_Scenes/healing_rune_panel.tscn" id="7_6nvq1"]
+
+[sub_resource type="Theme" id="Theme_yhl8k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gglvm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqixr"]
+bg_color = Color(0.638776, 0.256941, 0.229325, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7llkg"]
+texture = ExtResource("4_qqq1t")
+
+[node name="HUD_panel" type="TextureRect"]
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 535.0
+offset_bottom = 277.0
+scale = Vector2(0.75, 0.75)
+mouse_filter = 2
+theme = SubResource("Theme_yhl8k")
+texture = ExtResource("1_sernb")
+expand_mode = 1
+stretch_mode = 4
+script = ExtResource("2_o1k6b")
+
+[node name="HealthBar" parent="." instance=ExtResource("2_jr5sh")]
+layout_mode = 1
+anchor_left = 0.236364
+anchor_top = 0.216327
+anchor_right = 0.925252
+anchor_bottom = 0.261224
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_gglvm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wqixr")
+
+[node name="StaminaBar" parent="." instance=ExtResource("3_jr5sh")]
+layout_mode = 1
+anchor_left = 0.236364
+anchor_top = 0.306122
+anchor_right = 0.925252
+anchor_bottom = 0.342857
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ManaBar" parent="." instance=ExtResource("5_o1k6b")]
+layout_mode = 1
+anchor_left = 0.236364
+anchor_top = 0.391837
+anchor_right = 0.925252
+anchor_bottom = 0.428571
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0485269
+anchor_top = 1.72028
+anchor_right = 0.279
+anchor_bottom = 2.773
+offset_right = -161.983
+offset_bottom = -258.078
+scale = Vector2(7, 7)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7llkg")
+metadata/_edit_use_anchors_ = true
+
+[node name="GestureTrail" type="Line2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.427451)
+top_level = true
+clip_children = 1
+z_index = 11
+points = PackedVector2Array(87, 506)
+width = 5.0
+default_color = Color(0, 1, 1, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+sharp_limit = 10.0
+round_precision = 25
+antialiased = true
+
+[node name="HealingRune Panel" parent="." instance=ExtResource("7_6nvq1")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0457912
+anchor_top = 2.82993
+anchor_right = 0.196633
+anchor_bottom = 3.35646
+offset_right = -80.0
+offset_bottom = -86.0
+scale = Vector2(3, 3)
+metadata/_edit_use_anchors_ = true

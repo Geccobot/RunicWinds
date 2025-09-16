@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://ddpitb5eqrqjc"]
+
+[ext_resource type="Script" uid="uid://5x1cs6si80em" path="res://Scripts/alert_manager.gd" id="1_4q8i0"]
+[ext_resource type="FontFile" uid="uid://d2hodyyurcqr5" path="res://Assets/Fonts/GallaeciaForte.ttf" id="2_4q8i0"]
+[ext_resource type="PackedScene" uid="uid://cqw0lffsfkuyo" path="res://Scenes/Global_Scenes/AlertPanel.tscn" id="2_dvlj8"]
+[ext_resource type="FontFile" uid="uid://d3141f31fy1qx" path="res://Assets/Fonts/windows_command_prompt.ttf" id="3_4q8i0"]
+[ext_resource type="Texture2D" uid="uid://ckj870djvyaog" path="res://Assets/Sprites/UI/Inventory_Menu/Gold.png" id="4_ug3e4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76npk"]
+atlas = ExtResource("4_ug3e4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unixg"]
+atlas = ExtResource("4_ug3e4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daj1k"]
+atlas = ExtResource("4_ug3e4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haxxh"]
+atlas = ExtResource("4_ug3e4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3brmy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76npk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unixg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daj1k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haxxh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="AlertManager" type="Node"]
+process_mode = 3
+script = ExtResource("1_4q8i0")
+
+[node name="AlertPanel" parent="." instance=ExtResource("2_dvlj8")]
+
+[node name="GoldAlertPanel" type="CanvasLayer" parent="."]
+
+[node name="GoldLabel" type="Label" parent="GoldAlertPanel"]
+anchors_preset = -1
+anchor_left = 0.642361
+anchor_top = 0.756173
+anchor_right = 0.742188
+anchor_bottom = 0.83642
+offset_left = -220.0
+offset_top = -266.0
+offset_right = -294.0
+offset_bottom = -292.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("3_4q8i0")
+text = "+ 1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GoldAlertPanel"]
+position = Vector2(616, 249)
+scale = Vector2(1.5, 1.59375)
+sprite_frames = SubResource("SpriteFrames_3brmy")
+autoplay = "default"
+frame_progress = 0.30646
+
+[node name="AreaPanel" type="CanvasLayer" parent="."]
+
+[node name="AreaLabel" type="Label" parent="AreaPanel"]
+anchors_preset = -1
+anchor_top = 0.606481
+anchor_right = 1.00781
+anchor_bottom = 0.680556
+offset_top = 183.0
+offset_right = -774.0
+offset_bottom = 151.0
+scale = Vector2(3, 3)
+theme_override_colors/font_color = Color(1, 0.878431, 0.717647, 1)
+theme_override_fonts/font = ExtResource("2_4q8i0")
+theme_override_font_sizes/font_size = 16
+text = "-Area Name-"
+horizontal_alignment = 1
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,193 @@
+[gd_scene load_steps=27 format=3 uid="uid://bdyjgu1um4d8k"]
+
+[ext_resource type="Script" uid="uid://dgmavc1boor6y" path="res://Scenes/Enemies/leehr.gd" id="1_k8g10"]
+[ext_resource type="Script" uid="uid://bqkd1gfx0nqjb" path="res://Player/Scripts/combat.gd" id="2_inxlt"]
+[ext_resource type="Script" uid="uid://b8rjkhevwopot" path="res://Player/Scripts/resources.gd" id="3_weyg5"]
+[ext_resource type="Script" uid="uid://r64b460xwopc" path="res://Player/Scripts/stats.gd" id="4_6xd5b"]
+[ext_resource type="Texture2D" uid="uid://bigs1aehu7ydq" path="res://Assets/Sprites/Enemies/Leehr/Leehr_activate_down.png" id="5_fysme"]
+[ext_resource type="Texture2D" uid="uid://bevhalxpicy3n" path="res://Assets/Sprites/Enemies/Leehr/Leehr_fly.png" id="6_c5aco"]
+[ext_resource type="AudioStream" uid="uid://tnr5v3eubfbw" path="res://Assets/music/GamePlaySFX/hurt_c_08-102842.mp3" id="7_10i86"]
+[ext_resource type="PackedScene" uid="uid://wpsitkqfnea6" path="res://Scenes/UI_Scenes/enemy_health_bar.tscn" id="8_jsngf"]
+[ext_resource type="Script" uid="uid://jp44gbkgwwnq" path="res://Scripts/Combat/Hurtbox.gd" id="9_q3a2i"]
+[ext_resource type="Script" uid="uid://c15nrkp3b0akl" path="res://Scripts/Combat/Hitbox.gd" id="10_ihk3w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg3x3"]
+atlas = ExtResource("5_fysme")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e85jb"]
+atlas = ExtResource("5_fysme")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnkxg"]
+atlas = ExtResource("5_fysme")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_optp2"]
+atlas = ExtResource("6_c5aco")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxwbp"]
+atlas = ExtResource("6_c5aco")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oiwh"]
+atlas = ExtResource("6_c5aco")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0spnk"]
+atlas = ExtResource("6_c5aco")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4w20h"]
+atlas = ExtResource("6_c5aco")
+region = Rect2(256, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v60fu"]
+atlas = ExtResource("6_c5aco")
+region = Rect2(320, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvh53"]
+atlas = ExtResource("6_c5aco")
+region = Rect2(384, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlcbe"]
+atlas = ExtResource("6_c5aco")
+region = Rect2(448, 0, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_05q80"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg3x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e85jb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnkxg")
+}],
+"loop": false,
+"name": &"activate_down",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_optp2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxwbp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oiwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0spnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4w20h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v60fu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvh53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wlcbe")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg3x3")
+}],
+"loop": false,
+"name": &"unactivated_down",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ii8gj"]
+radius = 20.0
+height = 40.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_inxlt"]
+radius = 13.0384
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nwaie"]
+radius = 176.23
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k8g10"]
+
+[node name="Leehr" type="CharacterBody2D" groups=["Enemies"]]
+script = ExtResource("1_k8g10")
+knockback_time = 0.4
+move_speed = 75.0
+attack_range = 0.0
+
+[node name="Combat" type="Node" parent="."]
+script = ExtResource("2_inxlt")
+
+[node name="Resources" type="Node" parent="."]
+script = ExtResource("3_weyg5")
+max_health = 75
+health = 75
+
+[node name="Stats" type="Node" parent="Resources"]
+script = ExtResource("4_6xd5b")
+
+[node name="Leehr" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_05q80")
+animation = &"activate_down"
+frame = 2
+frame_progress = 1.0
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="HitSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("7_10i86")
+
+[node name="Enemy_Health Bar" parent="." instance=ExtResource("8_jsngf")]
+offset_left = -22.0
+offset_top = -30.6666
+offset_right = 23.0
+offset_bottom = -29.1666
+
+[node name="Hurtbox" type="Area2D" parent="."]
+position = Vector2(-22, 0)
+script = ExtResource("9_q3a2i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(22, 4)
+shape = SubResource("CapsuleShape2D_ii8gj")
+debug_color = Color(0, 0.642848, 0.310609, 0.42)
+
+[node name="Hitbox" type="Area2D" parent="." node_paths=PackedStringArray("Boxowner")]
+script = ExtResource("10_ihk3w")
+damage = 15
+Boxowner = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_inxlt")
+debug_color = Color(1, 0.0118072, 0.01923, 0.42)
+
+[node name="DetectedArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectedArea"]
+shape = SubResource("CircleShape2D_nwaie")
+debug_color = Color(0.678248, 0.504781, 0, 0.42)
+
+[node name="DeathTimer" type="Timer" parent="."]
+wait_time = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k8g10")
+disabled = true
+
+[connection signal="animation_finished" from="Leehr" to="." method="_on_leehr_animation_finished"]
+[connection signal="body_entered" from="DetectedArea" to="." method="_on_detected_area_body_entered"]
+[connection signal="body_exited" from="DetectedArea" to="." method="_on_detected_area_body_exited"]
+[connection signal="timeout" from="DeathTimer" to="Combat" method="_on_death_timer_timeout"]

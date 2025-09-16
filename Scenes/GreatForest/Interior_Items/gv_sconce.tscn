@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs23mroeq5fpp"]
+
+[ext_resource type="Texture2D" uid="uid://0mpbeb63bf48" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_items.png" id="1_jwedr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vv5no"]
+atlas = ExtResource("1_jwedr")
+region = Rect2(112, 2, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix1u5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vv5no")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_4u81t"]
+colors = PackedColorArray(0.784314, 0.47451, 0, 1, 1, 1, 1, 0.0156863)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vv5no"]
+gradient = SubResource("Gradient_4u81t")
+fill = 1
+fill_from = Vector2(0.485, 0.45)
+fill_to = Vector2(0.76, 0.18)
+
+[node name="GV_sconce" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ix1u5")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = SubResource("GradientTexture2D_vv5no")

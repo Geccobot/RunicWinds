@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwtgqswo1k6am"]
+
+[ext_resource type="Script" uid="uid://d4iwx28nspegr" path="res://Scenes/UI_Scenes/mana_bar.gd" id="1_7hrwp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gglvm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqixr"]
+bg_color = Color(0.101979, 0.361952, 0.812918, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ieyps"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 10.0
+expand_margin_top = 4.0
+expand_margin_right = 10.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfop8"]
+bg_color = Color(0.549073, 0.775725, 0.976872, 1)
+
+[node name="ManaBar" type="ProgressBar"]
+z_index = 1
+anchors_preset = -1
+anchor_right = 0.208333
+anchor_bottom = 0.00617284
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_gglvm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_wqixr")
+show_percentage = false
+script = ExtResource("1_7hrwp")
+metadata/_edit_use_anchors_ = true
+
+[node name="GhostBar" type="ProgressBar" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ieyps")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vfop8")
+show_percentage = false
+
+[node name="ManaRegen" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="timeout" from="ManaRegen" to="." method="_on_timer_timeout"]

@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bp5e2026m2lt8"
+path="res://.godot/imported/3_Template_Dash_Up.aseprite-aa5952ad87bebac334a812c569f1b8a5.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/Test_Aseprite_Files/AsepriteFiles/3_Template_Dash_Up.aseprite"
+dest_files=["res://.godot/imported/3_Template_Dash_Up.aseprite-aa5952ad87bebac334a812c569f1b8a5.res"]
+
+[params]
+

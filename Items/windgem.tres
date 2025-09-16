@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b7dfiqtjfsby5"]
+
+[ext_resource type="Texture2D" uid="uid://bv2rdel88wr17" path="res://Assets/Sprites/Items/Key_Items/windgem.png" id="1_7a3ga"]
+[ext_resource type="Script" uid="uid://cuv5lg4um40ro" path="res://item_data.gd" id="1_kcwdw"]
+
+[resource]
+script = ExtResource("1_kcwdw")
+id = &"windgem"
+display_name = "Wind Gem"
+icon = ExtResource("1_7a3ga")
+description = "A gem with the \"Wind\" Rune embossed on it. Used to upgrade the effects of  Wind base incantations.
+
+Infinitly versitile, th e\"Wind\" Rune has seen many different uses throughout time, icluding farming, energy, and war. "
+max_stack = 99
+type = &"keyitem"
+metadata/_custom_type_script = "uid://cuv5lg4um40ro"

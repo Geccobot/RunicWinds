@@ -1,0 +1,102 @@
+[gd_scene load_steps=15 format=3 uid="uid://kxgh887vo0f1"]
+
+[ext_resource type="Script" uid="uid://c4k6rpf3ajtfc" path="res://Player/Scripts/title_screen.gd" id="1_6x3gy"]
+[ext_resource type="Texture2D" uid="uid://c4tynw31tqig0" path="res://Assets/Sprites/UI/Main_Menu/Title_Screen.png" id="1_q3323"]
+[ext_resource type="Texture2D" uid="uid://c1eq3jpqycww1" path="res://Assets/Sprites/UI/Main_Menu/newgame.png" id="2_1ok14"]
+[ext_resource type="AudioStream" uid="uid://0yas1r1x84cf" path="res://Assets/music/UISFX/digital-click-357350.mp3" id="2_81al6"]
+[ext_resource type="AudioStream" uid="uid://c86q178tdsebx" path="res://Assets/music/UISFX/menu-selection-102220.mp3" id="3_81al6"]
+[ext_resource type="Texture2D" uid="uid://rjf4i6eubg3o" path="res://Assets/Sprites/UI/Main_Menu/Title Card.png" id="5_4lgm7"]
+[ext_resource type="Texture2D" uid="uid://dvftn4pl4d863" path="res://Assets/Sprites/UI/Main_Menu/newgame-selected.png" id="6_6x3gy"]
+[ext_resource type="Texture2D" uid="uid://cc8d8r1lyk7b1" path="res://Assets/Sprites/UI/Main_Menu/newgame-hover.png" id="7_o3lng"]
+[ext_resource type="Texture2D" uid="uid://dub6me8cu37ex" path="res://Assets/Sprites/UI/Main_Menu/continue.png" id="8_dt86o"]
+[ext_resource type="Texture2D" uid="uid://b1ig7nn14nt27" path="res://Assets/Sprites/UI/Main_Menu/continue-selected.png" id="9_icksv"]
+[ext_resource type="Texture2D" uid="uid://crf0u1qeyv0m1" path="res://Assets/Sprites/UI/Main_Menu/continue-hover.png" id="10_8ufla"]
+[ext_resource type="Texture2D" uid="uid://dju3yr7l7k67o" path="res://Assets/Sprites/UI/Main_Menu/exit.png" id="11_h8l22"]
+[ext_resource type="Texture2D" uid="uid://ch4b4mnv8y2oj" path="res://Assets/Sprites/UI/Main_Menu/exit-selected.png" id="12_d0a34"]
+[ext_resource type="Texture2D" uid="uid://dgq7kamm5mc17" path="res://Assets/Sprites/UI/Main_Menu/exit-hover.png" id="13_dn1xl"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_6x3gy")
+
+[node name="ClickSFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(104, 359)
+stream = ExtResource("2_81al6")
+
+[node name="HoverSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_81al6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_q3323")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 0.271605
+anchor_right = 0.388889
+anchor_bottom = 0.888889
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = -80.0
+offset_top = -72.0
+offset_right = 560.0
+offset_bottom = 248.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_4lgm7")
+
+[node name="NewGame" type="TextureButton" parent="Control"]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 0
+offset_left = 104.0
+offset_top = 183.0
+offset_right = 357.0
+offset_bottom = 250.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("2_1ok14")
+texture_pressed = ExtResource("6_6x3gy")
+texture_hover = ExtResource("7_o3lng")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Continue" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 243.0
+offset_right = 376.0
+offset_bottom = 343.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("8_dt86o")
+texture_pressed = ExtResource("9_icksv")
+texture_hover = ExtResource("10_8ufla")
+
+[node name="Exit" type="TextureButton" parent="Control"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 315.0
+offset_right = 368.0
+offset_bottom = 415.0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture_normal = ExtResource("11_h8l22")
+texture_pressed = ExtResource("12_d0a34")
+texture_hover = ExtResource("13_dn1xl")
+
+[connection signal="mouse_entered" from="Control/NewGame" to="." method="_on_new_game_mouse_entered"]
+[connection signal="pressed" from="Control/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Control/NewGame" to="." method="_on_texture_button_pressed"]
+[connection signal="mouse_entered" from="Control/Continue" to="." method="_on_continue_mouse_entered"]
+[connection signal="pressed" from="Control/Continue" to="." method="_on_continue_pressed"]
+[connection signal="mouse_entered" from="Control/Exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="pressed" from="Control/Exit" to="." method="_on_exit_pressed"]

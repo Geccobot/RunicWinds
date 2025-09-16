@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cb0nj2g5wmesd"]
+
+[ext_resource type="Texture2D" uid="uid://b8wh5m3m4hhqi" path="res://Assets/Sprites/Green Veil/Environment/Objects.png" id="1_u1t3a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggpqa"]
+atlas = ExtResource("1_u1t3a")
+region = Rect2(208, 64, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix1u5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggpqa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1fw0f"]
+radius = 6.66667
+
+[node name="Bedroll" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -11)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, 34)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ix1u5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 34)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_1fw0f")

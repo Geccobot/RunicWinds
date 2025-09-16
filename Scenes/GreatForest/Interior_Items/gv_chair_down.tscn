@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://gmugpi5ev5f0"]
+
+[ext_resource type="Texture2D" uid="uid://0mpbeb63bf48" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_items.png" id="1_4mqvk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mqvk"]
+atlas = ExtResource("1_4mqvk")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix1u5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mqvk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvsj0"]
+size = Vector2(10.6667, 11.5)
+
+[node name="GV_chair_down" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ix1u5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 0.624987)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_kvsj0")

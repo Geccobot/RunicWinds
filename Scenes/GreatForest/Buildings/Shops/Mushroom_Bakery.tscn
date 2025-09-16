@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3sl5qyebk8ft"]
+
+[ext_resource type="Texture2D" uid="uid://doc6uhmdgulpk" path="res://Assets/Sprites/Green Veil/Environment/Mushroom_Bakery.png" id="1_5i6rk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5bg2"]
+atlas = ExtResource("1_5i6rk")
+region = Rect2(0, 0, 129, 103)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5bg2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mushroom_Bakery" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(2, -108)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-10, -26, -10, 18, -24, 18, -67, 11, -92, -2, -79, -23, -71, -35, 78, -35, 90, -6, 91, 0, 50, 13, 26, 18, 11, 18, 11, -26)

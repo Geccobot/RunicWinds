@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctk43li2wtgqv"]
+
+[ext_resource type="Script" uid="uid://kc23uvd4dbr6" path="res://Player/Scripts/Global/music_manager.gd" id="1_nvxiv"]
+
+[node name="MusicManager" type="Node"]
+process_mode = 3
+script = ExtResource("1_nvxiv")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+process_mode = 3

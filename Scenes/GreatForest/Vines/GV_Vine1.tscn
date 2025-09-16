@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://deuydie6gyc2m"]
+
+[ext_resource type="Texture2D" uid="uid://cqbrvm40qllfg" path="res://Assets/Sprites/Green Veil/Environment/Trees.png" id="1_km7ae"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed0d2"]
+atlas = ExtResource("1_km7ae")
+region = Rect2(134, 192, 32, 56)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed0d2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GV_Vine" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 17)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4u8tt")

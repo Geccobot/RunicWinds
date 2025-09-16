@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpvlbxpn8gub2"]
+
+[ext_resource type="Texture2D" uid="uid://b3apju1w7j2s4" path="res://Assets/Sprites/Enemies/DeerHead Cultist_Test-32x32-32x64.png" id="1_4tems"]
+[ext_resource type="Script" uid="uid://c15nrkp3b0akl" path="res://Scripts/Combat/Hitbox.gd" id="2_inwqd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wlijl"]
+radius = 6.0
+height = 34.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s772u"]
+radius = 7.0
+height = 38.0
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(0, 18)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_4tems")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -18)
+shape = SubResource("CapsuleShape2D_wlijl")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_inwqd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_s772u")
+debug_color = Color(0.99751, 0, 0.164338, 0.42)

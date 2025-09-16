@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://dkuvr86nuf16j"]
+
+[ext_resource type="Texture2D" uid="uid://doym81vhcpsw6" path="res://Assets/Sprites/Green Veil/Environment/Shrine_Entrance.png" id="1_6phrl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldjo0"]
+atlas = ExtResource("1_6phrl")
+region = Rect2(16, 0, 224, 185)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldjo0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjgo3"]
+size = Vector2(196, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7chvg"]
+size = Vector2(196, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1don1"]
+size = Vector2(4, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o34vh"]
+size = Vector2(4, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fmae"]
+size = Vector2(192, 133)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, -44)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-126, 126)
+shape = SubResource("RectangleShape2D_pjgo3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(126, 126)
+shape = SubResource("RectangleShape2D_7chvg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(222, 85)
+shape = SubResource("RectangleShape2D_1don1")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-222, 85)
+shape = SubResource("RectangleShape2D_o34vh")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-128, -5.5)
+shape = SubResource("RectangleShape2D_4fmae")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(128, -6)
+shape = SubResource("RectangleShape2D_4fmae")

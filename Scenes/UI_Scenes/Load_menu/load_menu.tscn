@@ -1,0 +1,537 @@
+[gd_scene load_steps=22 format=3 uid="uid://cjhwkxs81vf3n"]
+
+[ext_resource type="Script" uid="uid://bf2hodhjlha6i" path="res://Scenes/UI_Scenes/Load_menu/load_menu.gd" id="1_mlmp0"]
+[ext_resource type="Texture2D" uid="uid://5ru31ge4403e" path="res://Assets/Sprites/UI/Load menu/Menu_backdrop.png" id="1_x3na1"]
+[ext_resource type="Texture2D" uid="uid://47ocwg8agh8k" path="res://Assets/Sprites/UI/Load menu/FIle_Container.png" id="4_7ixie"]
+[ext_resource type="Texture2D" uid="uid://d4k7hysrr621b" path="res://Assets/Sprites/UI/Load menu/FIle_Container-selected.png" id="5_0abit"]
+[ext_resource type="Texture2D" uid="uid://db4r76lcy5eyn" path="res://Assets/Sprites/UI/Load menu/FIle_Container-hover.png" id="6_aquxn"]
+[ext_resource type="FontFile" uid="uid://d2hodyyurcqr5" path="res://Assets/Fonts/GallaeciaForte.ttf" id="6_li2u6"]
+[ext_resource type="Texture2D" uid="uid://dttjoavje6na3" path="res://Assets/Sprites/UI/Load menu/back_button.png" id="7_fh3xp"]
+[ext_resource type="Texture2D" uid="uid://cbpj4vn26yn4s" path="res://Assets/Sprites/UI/Load menu/DeleteButton.png" id="7_v8jow"]
+[ext_resource type="Texture2D" uid="uid://lo7xyvkti8m" path="res://Assets/Sprites/UI/Load menu/DeleteButton-Selected.png" id="8_8x1hq"]
+[ext_resource type="Texture2D" uid="uid://cvfuc7rvwn8cc" path="res://Assets/Sprites/UI/Load menu/back_button_selected.png" id="8_pqdoo"]
+[ext_resource type="Texture2D" uid="uid://wrefjw2jswpn" path="res://Assets/Sprites/UI/Load menu/back_button_hover.png" id="9_li2u6"]
+[ext_resource type="AudioStream" uid="uid://0yas1r1x84cf" path="res://Assets/music/UISFX/digital-click-357350.mp3" id="9_pqdoo"]
+[ext_resource type="Texture2D" uid="uid://c5a45pn3jotcx" path="res://Assets/Sprites/UI/Load menu/DeleteButton-Hover.png" id="9_vvh3u"]
+[ext_resource type="AudioStream" uid="uid://c86q178tdsebx" path="res://Assets/music/UISFX/menu-selection-102220.mp3" id="10_li2u6"]
+[ext_resource type="Texture2D" uid="uid://byt1eqky1jc7i" path="res://Assets/Sprites/UI/Load menu/Confirm_container.png" id="12_pwi5a"]
+[ext_resource type="Texture2D" uid="uid://wmnwlu7a1qqi" path="res://Assets/Sprites/UI/Load menu/YesButton.png" id="13_5c4ie"]
+[ext_resource type="Texture2D" uid="uid://bwcup646ajwf8" path="res://Assets/Sprites/UI/Load menu/YesButton-Selected.png" id="14_7a13i"]
+[ext_resource type="Texture2D" uid="uid://cj5fx0ac7gp1t" path="res://Assets/Sprites/UI/Load menu/YesButton-Hover.png" id="15_wdiqn"]
+[ext_resource type="Texture2D" uid="uid://btmt4fi8dq6j0" path="res://Assets/Sprites/UI/Load menu/NoButton.png" id="16_v8jow"]
+[ext_resource type="Texture2D" uid="uid://dd4jivqkfyurp" path="res://Assets/Sprites/UI/Load menu/NoButton-selected.png" id="17_8x1hq"]
+[ext_resource type="Texture2D" uid="uid://2r1addt47kie" path="res://Assets/Sprites/UI/Load menu/NoButton-hover.png" id="18_vvh3u"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_mlmp0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_x3na1")
+
+[node name="File_Buttons" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="File_1" type="TextureButton" parent="File_Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -10.7
+anchor_top = -5.0
+anchor_right = 11.7
+anchor_bottom = -1.8
+offset_right = -672.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture_normal = ExtResource("4_7ixie")
+texture_pressed = ExtResource("5_0abit")
+texture_hover = ExtResource("6_aquxn")
+metadata/_edit_use_anchors_ = true
+
+[node name="slot_name" type="Label" parent="File_Buttons/File_1"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = 4.0
+offset_right = 11.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+theme_override_font_sizes/font_size = 17
+text = "Save Slot 1"
+
+[node name="FileLabel1" type="Label" parent="File_Buttons/File_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.446429
+anchor_top = 0.375
+anchor_right = 0.580357
+anchor_bottom = 0.625
+offset_right = 30.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+theme_override_font_sizes/font_size = 16
+text = "Empty"
+metadata/_edit_use_anchors_ = true
+
+[node name="DeleteButton1" type="TextureButton" parent="File_Buttons/File_1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.830357
+anchor_top = 0.25
+anchor_right = 0.973214
+anchor_bottom = 0.765625
+offset_right = 32.0
+offset_bottom = 16.5
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_v8jow")
+texture_pressed = ExtResource("8_8x1hq")
+texture_hover = ExtResource("9_vvh3u")
+metadata/_edit_use_anchors_ = true
+
+[node name="File_2" type="TextureButton" parent="File_Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -10.7
+anchor_top = -1.1
+anchor_right = 11.7
+anchor_bottom = 2.1
+offset_right = -672.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture_normal = ExtResource("4_7ixie")
+texture_pressed = ExtResource("5_0abit")
+texture_hover = ExtResource("6_aquxn")
+metadata/_edit_use_anchors_ = true
+
+[node name="slot_name" type="Label" parent="File_Buttons/File_2"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = 4.0
+offset_right = 11.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.286909, 0.0822909, 0, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+theme_override_font_sizes/font_size = 17
+text = "Save Slot 2"
+
+[node name="FileLabel2" type="Label" parent="File_Buttons/File_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.446429
+anchor_top = 0.40625
+anchor_right = 0.580357
+anchor_bottom = 0.65625
+offset_right = 30.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+text = "Empty"
+metadata/_edit_use_anchors_ = true
+
+[node name="DeleteButton2" type="TextureButton" parent="File_Buttons/File_2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.830357
+anchor_top = 0.21875
+anchor_right = 0.973214
+anchor_bottom = 0.734375
+offset_right = 32.0
+offset_bottom = 16.5
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_v8jow")
+texture_pressed = ExtResource("8_8x1hq")
+texture_hover = ExtResource("9_vvh3u")
+metadata/_edit_use_anchors_ = true
+
+[node name="File_3" type="TextureButton" parent="File_Buttons"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -10.7
+anchor_top = 2.8
+anchor_right = 11.7
+anchor_bottom = 6.0
+offset_right = -672.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture_normal = ExtResource("4_7ixie")
+texture_pressed = ExtResource("5_0abit")
+texture_hover = ExtResource("6_aquxn")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="File_Buttons/File_3"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = 4.0
+offset_right = 11.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+theme_override_colors/font_color = Color(0.286909, 0.0822909, 0, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+theme_override_font_sizes/font_size = 17
+text = "Save Slot 3"
+
+[node name="FileLabel3" type="Label" parent="File_Buttons/File_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.446429
+anchor_top = 0.375
+anchor_right = 0.580357
+anchor_bottom = 0.625
+offset_right = 30.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+text = "Empty"
+metadata/_edit_use_anchors_ = true
+
+[node name="DeleteButton3" type="TextureButton" parent="File_Buttons/File_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.830357
+anchor_top = 0.25
+anchor_right = 0.973214
+anchor_bottom = 0.765625
+offset_right = 32.0
+offset_bottom = 16.5
+grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("7_v8jow")
+texture_pressed = ExtResource("8_8x1hq")
+texture_hover = ExtResource("9_vvh3u")
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="TextureButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.0347222
+anchor_top = 0.0493827
+anchor_right = 0.0902778
+anchor_bottom = 0.154321
+offset_right = -48.0
+offset_bottom = -51.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("7_fh3xp")
+texture_pressed = ExtResource("8_pqdoo")
+texture_hover = ExtResource("9_li2u6")
+metadata/_edit_use_anchors_ = true
+
+[node name="ClickSFX" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(104, 359)
+stream = ExtResource("9_pqdoo")
+
+[node name="HoverSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_li2u6")
+
+[node name="CreateNewFile" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="input_block" type="Control" parent="CreateNewFile"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CreateNewFile"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+offset_left = -56.0
+offset_top = -16.0
+offset_right = 168.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 0
+texture = ExtResource("12_pwi5a")
+
+[node name="Create New File?" type="Label" parent="CreateNewFile/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.116071
+anchor_top = 0.078125
+anchor_right = 0.888393
+anchor_bottom = 0.4375
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+text = "Create New File?"
+metadata/_edit_use_anchors_ = true
+
+[node name="yes_button" type="TextureButton" parent="CreateNewFile/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.188091
+anchor_top = 0.416965
+anchor_right = 0.47391
+anchor_bottom = 0.931965
+offset_left = -0.132305
+offset_top = -1.68576
+offset_right = -0.155838
+offset_bottom = -1.64576
+grow_vertical = 0
+texture_normal = ExtResource("13_5c4ie")
+texture_pressed = ExtResource("14_7a13i")
+texture_hover = ExtResource("15_wdiqn")
+metadata/_edit_use_anchors_ = true
+
+[node name="no_button" type="TextureButton" parent="CreateNewFile/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535714
+anchor_top = 0.390625
+anchor_right = 0.821429
+anchor_bottom = 0.90625
+grow_vertical = 0
+texture_normal = ExtResource("16_v8jow")
+texture_pressed = ExtResource("17_8x1hq")
+texture_hover = ExtResource("18_vvh3u")
+metadata/_edit_use_anchors_ = true
+
+[node name="LoadFile" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="InputBlock" type="Control" parent="LoadFile"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="LoadFile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -16.0
+offset_right = 168.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 0
+texture = ExtResource("12_pwi5a")
+
+[node name="Load File?" type="Label" parent="LoadFile/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.276786
+anchor_top = 0.078125
+anchor_right = 0.745536
+anchor_bottom = 0.328125
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+text = "Load file?"
+metadata/_edit_use_anchors_ = true
+
+[node name="LFno_button" type="TextureButton" parent="LoadFile/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535714
+anchor_top = 0.390625
+anchor_right = 0.821429
+anchor_bottom = 0.90625
+grow_vertical = 0
+texture_normal = ExtResource("16_v8jow")
+texture_pressed = ExtResource("17_8x1hq")
+texture_hover = ExtResource("18_vvh3u")
+metadata/_edit_use_anchors_ = true
+
+[node name="LFyes_button" type="TextureButton" parent="LoadFile/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1875
+anchor_top = 0.390625
+anchor_right = 0.473214
+anchor_bottom = 0.90625
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("13_5c4ie")
+texture_pressed = ExtResource("14_7a13i")
+texture_hover = ExtResource("15_wdiqn")
+metadata/_edit_use_anchors_ = true
+
+[node name="DeleteFile" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="InputBlock" type="Control" parent="DeleteFile"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="DeleteFile"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -16.0
+offset_right = 168.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 0
+texture = ExtResource("12_pwi5a")
+
+[node name="Delete File?" type="Label" parent="DeleteFile/TextureRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.276786
+anchor_top = 0.078125
+anchor_right = 0.745536
+anchor_bottom = 0.328125
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("6_li2u6")
+text = "Delete File?"
+metadata/_edit_use_anchors_ = true
+
+[node name="DFyes_button" type="TextureButton" parent="DeleteFile/TextureRect/Delete File?"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0912704
+anchor_top = 1.0625
+anchor_right = 0.416666
+anchor_bottom = 3.125
+texture_normal = ExtResource("13_5c4ie")
+texture_pressed = ExtResource("14_7a13i")
+texture_hover = ExtResource("15_wdiqn")
+metadata/_edit_use_anchors_ = true
+
+[node name="DFno_button" type="TextureButton" parent="DeleteFile/TextureRect/Delete File?"]
+layout_mode = 0
+anchor_left = 0.575396
+anchor_top = 1.0625
+anchor_right = 1.08333
+anchor_bottom = 3.125
+texture_normal = ExtResource("16_v8jow")
+texture_pressed = ExtResource("17_8x1hq")
+texture_hover = ExtResource("18_vvh3u")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="File_Buttons/File_1" to="." method="_on_file_1_mouse_entered"]
+[connection signal="pressed" from="File_Buttons/File_1" to="." method="_on_file_1_pressed"]
+[connection signal="pressed" from="File_Buttons/File_1" to="." method="_on_f_ile_1_pressed"]
+[connection signal="mouse_entered" from="File_Buttons/File_1/DeleteButton1" to="." method="_on_delete_button_1_mouse_entered"]
+[connection signal="pressed" from="File_Buttons/File_1/DeleteButton1" to="." method="_on_delete_button_1_pressed"]
+[connection signal="mouse_entered" from="File_Buttons/File_2" to="." method="_on_file_2_mouse_entered"]
+[connection signal="pressed" from="File_Buttons/File_2" to="." method="_on_file_2_pressed"]
+[connection signal="mouse_entered" from="File_Buttons/File_2/DeleteButton2" to="." method="_on_delete_button_2_mouse_entered"]
+[connection signal="pressed" from="File_Buttons/File_2/DeleteButton2" to="." method="_on_delete_button_2_pressed"]
+[connection signal="mouse_entered" from="File_Buttons/File_3" to="." method="_on_file_3_mouse_entered"]
+[connection signal="pressed" from="File_Buttons/File_3" to="." method="_on_file_3_pressed"]
+[connection signal="mouse_entered" from="File_Buttons/File_3/DeleteButton3" to="." method="_on_delete_button_3_mouse_entered"]
+[connection signal="pressed" from="File_Buttons/File_3/DeleteButton3" to="." method="_on_delete_button_3_pressed"]
+[connection signal="mouse_entered" from="BackButton" to="." method="_on_back_button_mouse_entered"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="CreateNewFile/TextureRect/yes_button" to="." method="_on_yes_button_mouse_entered"]
+[connection signal="pressed" from="CreateNewFile/TextureRect/yes_button" to="." method="_on_yes_button_pressed"]
+[connection signal="toggled" from="CreateNewFile/TextureRect/yes_button" to="." method="_on_yes_button_toggled"]
+[connection signal="mouse_entered" from="CreateNewFile/TextureRect/no_button" to="." method="_on_no_button_mouse_entered"]
+[connection signal="pressed" from="CreateNewFile/TextureRect/no_button" to="." method="_on_no_button_pressed"]
+[connection signal="mouse_entered" from="LoadFile/TextureRect/LFno_button" to="." method="_on_l_fno_button_mouse_entered"]
+[connection signal="mouse_entered" from="LoadFile/TextureRect/LFno_button" to="." method="_on_no_button_mouse_entered"]
+[connection signal="pressed" from="LoadFile/TextureRect/LFno_button" to="." method="_on_l_fno_button_pressed"]
+[connection signal="pressed" from="LoadFile/TextureRect/LFno_button" to="." method="_on_no_button_pressed"]
+[connection signal="mouse_entered" from="LoadFile/TextureRect/LFyes_button" to="." method="_on_yes_button_mouse_entered"]
+[connection signal="mouse_entered" from="LoadFile/TextureRect/LFyes_button" to="." method="_on_l_fyes_button_mouse_entered"]
+[connection signal="pressed" from="LoadFile/TextureRect/LFyes_button" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="LoadFile/TextureRect/LFyes_button" to="." method="_on_l_fyes_button_pressed"]
+[connection signal="toggled" from="LoadFile/TextureRect/LFyes_button" to="." method="_on_yes_button_toggled"]
+[connection signal="mouse_entered" from="DeleteFile/TextureRect/Delete File?/DFyes_button" to="." method="_on_d_fyes_button_mouse_entered"]
+[connection signal="pressed" from="DeleteFile/TextureRect/Delete File?/DFyes_button" to="." method="_on_d_fyes_button_pressed"]
+[connection signal="mouse_entered" from="DeleteFile/TextureRect/Delete File?/DFno_button" to="." method="_on_d_fno_button_mouse_entered"]
+[connection signal="pressed" from="DeleteFile/TextureRect/Delete File?/DFno_button" to="." method="_on_d_fno_button_pressed"]

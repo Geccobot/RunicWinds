@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqw0lffsfkuyo"]
+
+[ext_resource type="Texture2D" uid="uid://byt1eqky1jc7i" path="res://Assets/Sprites/UI/Load menu/Confirm_container.png" id="2_2tmn2"]
+[ext_resource type="FontFile" uid="uid://d3141f31fy1qx" path="res://Assets/Fonts/windows_command_prompt.ttf" id="2_ptf6q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ug3e4"]
+texture = ExtResource("2_2tmn2")
+
+[node name="AlertPanel" type="CanvasLayer"]
+process_mode = 3
+
+[node name="Panel" type="Panel" parent="."]
+process_mode = 1
+anchors_preset = -1
+anchor_left = 0.398438
+anchor_top = 0.723765
+anchor_right = 0.625
+anchor_bottom = 0.884259
+offset_left = -11.0006
+offset_top = 3.00027
+offset_right = -11.0006
+offset_bottom = 3.00031
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ug3e4")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+process_mode = 3
+z_index = 30
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -88.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_ptf6q")
+text = "Test alert"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true

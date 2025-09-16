@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvak2ehq32gyp"]
+
+[ext_resource type="Texture2D" uid="uid://1hnrjhgt842n" path="res://Assets/Sprites/Testing/Sprite-0006.png" id="1_0ef0l"]
+[ext_resource type="Script" uid="uid://c15nrkp3b0akl" path="res://Scripts/Combat/Hitbox.gd" id="2_jwxb8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mvool"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1y0un"]
+size = Vector2(32, 32)
+
+[node name="Test" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0ef0l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mvool")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("2_jwxb8")
+damage = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_1y0un")
+debug_color = Color(0.999132, 0, 0.122649, 0.42)

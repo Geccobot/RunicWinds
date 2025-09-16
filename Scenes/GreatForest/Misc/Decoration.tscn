@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvk7w0ii4m50d"]
+
+[ext_resource type="Texture2D" uid="uid://b8wh5m3m4hhqi" path="res://Assets/Sprites/Green Veil/Environment/Objects.png" id="1_lp8u0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp8u0"]
+atlas = ExtResource("1_lp8u0")
+region = Rect2(31, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lp8u0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(1.1, 25)
+polygon = PackedVector2Array(-20, 0, 20, 0, 30, -5, 37, -6, 37, -9, 42, -9, 49, -17, 49, -30, 41, -37, 38, -37, 36, -39, 31, -39, 29, -42, 21, -42, 18, -44, -18, -44, -21, -42, -29, -42, -32, -39, -37, -39, -39, -37, -42, -37, -48, -29, -48, -22, -48, -16, -46, -14, -41, -9, -37, -9, -36, -7, -28, -7, -28, -4, -19, -4, -19, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(-0.999998, 3)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")

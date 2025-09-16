@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://xigca0p5likf"]
+
+[ext_resource type="Script" uid="uid://c2h3411x43rh5" path="res://canvas_layer.gd" id="1_qhvk8"]
+[ext_resource type="Texture2D" uid="uid://dokbccx7agwgk" path="res://Assets/Sprites/UI/Geccobot Logo.png" id="2_ohpbu"]
+[ext_resource type="AudioStream" uid="uid://drkpqsql7e351" path="res://Assets/music/UISFX/robot-drum-loop-100bpm-96907.mp3" id="3_ohpbu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bsfvm"]
+texture = ExtResource("2_ohpbu")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_qhvk8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -210.0
+offset_right = -160.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+theme_override_styles/panel = SubResource("StyleBoxTexture_bsfvm")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ohpbu")
+volume_db = 4.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

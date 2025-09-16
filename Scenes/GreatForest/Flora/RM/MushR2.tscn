@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1hjgchi88hv3"]
+
+[ext_resource type="Texture2D" uid="uid://bf5gxmc7a1fug" path="res://Assets/Sprites/Green Veil/Environment/Mushrooms.png" id="1_xa1yc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ae5wn"]
+radius = 1.0
+height = 14.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa1yc"]
+atlas = ExtResource("1_xa1yc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa1yc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ae5wn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(4, -32)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4u8tt")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://3y1clgc3f5lk"]
+
+[ext_resource type="Texture2D" uid="uid://0mpbeb63bf48" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_items.png" id="1_55txa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55txa"]
+atlas = ExtResource("1_55txa")
+region = Rect2(88, 113, 34, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix1u5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55txa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GV_fishing_crate_bunch1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -11)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, 19)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ix1u5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-9, 8, -14, 9, -20, 9, -26, 9, -26, 31, -10, 31, -10, 40, 13, 40, 13, 28, 24, 28, 23, 5, 16, 7, 7, 7, -1, 8)

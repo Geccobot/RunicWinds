@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://46m6a2q4b0bj"]
+
+[ext_resource type="Texture2D" uid="uid://beo4j6h43huf7" path="res://Assets/Sprites/Green Veil/Environment/Ruins.png" id="1_nj4iq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj4iq"]
+atlas = ExtResource("1_nj4iq")
+region = Rect2(260, 62, 52, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nj4iq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j1dvk"]
+radius = 14.0
+height = 128.0
+
+[node name="RuinArchFallen1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(-6, 61)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 60)
+shape = SubResource("CapsuleShape2D_j1dvk")

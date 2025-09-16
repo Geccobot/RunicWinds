@@ -1,0 +1,741 @@
+[gd_scene load_steps=68 format=3 uid="uid://vmdbkaplheie"]
+
+[ext_resource type="Script" uid="uid://d1j23luc0u5lo" path="res://Scenes/UI_Scenes/pause_menu.gd" id="1_essrr"]
+[ext_resource type="Texture2D" uid="uid://d3wab06uwsudg" path="res://Assets/Sprites/UI/misc_menu/Pause_backdrop.png" id="1_u3t1m"]
+[ext_resource type="Texture2D" uid="uid://bflpm8ar0ss0j" path="res://Assets/Sprites/UI/Paused_Menu/Paused_Label.png" id="2_v21s0"]
+[ext_resource type="Texture2D" uid="uid://dttjoavje6na3" path="res://Assets/Sprites/UI/Load menu/back_button.png" id="3_x5bx2"]
+[ext_resource type="Texture2D" uid="uid://cvfuc7rvwn8cc" path="res://Assets/Sprites/UI/Load menu/back_button_selected.png" id="4_vyq8u"]
+[ext_resource type="Texture2D" uid="uid://wrefjw2jswpn" path="res://Assets/Sprites/UI/Load menu/back_button_hover.png" id="5_r3wnr"]
+[ext_resource type="Texture2D" uid="uid://dwenab823t2df" path="res://Assets/Sprites/UI/Paused_Menu/Equipment.png" id="6_jpyed"]
+[ext_resource type="Texture2D" uid="uid://bq7515wqe0t7t" path="res://Assets/Sprites/UI/Paused_Menu/Equipment-selected.png" id="7_p76lp"]
+[ext_resource type="Texture2D" uid="uid://blh3gygli7qfa" path="res://Assets/Sprites/UI/Paused_Menu/Equipment-Hover.png" id="8_2a1vs"]
+[ext_resource type="Texture2D" uid="uid://4ax44pkhr4th" path="res://Assets/Sprites/UI/Paused_Menu/Inventory.png" id="9_tlpbd"]
+[ext_resource type="Texture2D" uid="uid://8flyveek65jg" path="res://Assets/Sprites/UI/Paused_Menu/Status.png" id="9_vyq8u"]
+[ext_resource type="Texture2D" uid="uid://b3t2jdlqactgs" path="res://Assets/Sprites/UI/Paused_Menu/Inventory-Selected.png" id="10_35jee"]
+[ext_resource type="Texture2D" uid="uid://ddwxuavglpqfi" path="res://Assets/Sprites/UI/Paused_Menu/Status-Selected.png" id="10_r3wnr"]
+[ext_resource type="Texture2D" uid="uid://dboo2ceanf8yh" path="res://Assets/Sprites/UI/Paused_Menu/Inventory-Hover.png" id="11_fapb8"]
+[ext_resource type="Texture2D" uid="uid://dnfs2yvjow1k3" path="res://Assets/Sprites/UI/Paused_Menu/Status-Hover.png" id="11_jpyed"]
+[ext_resource type="Texture2D" uid="uid://mcko7gunbw6o" path="res://Assets/Sprites/UI/Paused_Menu/Quest_Log.png" id="12_p76lp"]
+[ext_resource type="Texture2D" uid="uid://cb3x6rso4jgaq" path="res://Assets/Sprites/UI/Paused_Menu/Quest_Log-Selected.png" id="13_2a1vs"]
+[ext_resource type="Texture2D" uid="uid://co7ntdhhrq3us" path="res://Assets/Sprites/UI/misc_menu/button_normal.png" id="13_ct3r6"]
+[ext_resource type="Texture2D" uid="uid://wveuuwvfo1ob" path="res://Assets/Sprites/UI/misc_menu/button_selected.png" id="14_50ll0"]
+[ext_resource type="Texture2D" uid="uid://ck43cfcnh6tty" path="res://Assets/Sprites/UI/Paused_Menu/Quest_Log-Hover.png" id="14_jse0a"]
+[ext_resource type="Texture2D" uid="uid://d361wxx0ah44i" path="res://Assets/Sprites/UI/misc_menu/button_hover.png" id="15_77qfc"]
+[ext_resource type="Texture2D" uid="uid://c2x8wn0dbyxfe" path="res://Assets/Sprites/UI/misc_menu/Square_container.png" id="17_r53w3"]
+[ext_resource type="Texture2D" uid="uid://x8li64fi8e3c" path="res://Assets/Sprites/UI/misc_menu/RunePanel.png" id="18_gjo3n"]
+[ext_resource type="Texture2D" uid="uid://cbtmhui5xhoh1" path="res://Assets/Sprites/UI/Paused_Menu/Map.png" id="18_ixdti"]
+[ext_resource type="FontFile" uid="uid://d3141f31fy1qx" path="res://Assets/Fonts/windows_command_prompt.ttf" id="19_67oe2"]
+[ext_resource type="Texture2D" uid="uid://ck12ilgkp63vy" path="res://Assets/Sprites/UI/Paused_Menu/Map-Selected.png" id="19_kjdl3"]
+[ext_resource type="Texture2D" uid="uid://bbek0ef8fb7n3" path="res://Assets/Sprites/UI/Paused_Menu/Map-Hover.png" id="20_xepaj"]
+[ext_resource type="Texture2D" uid="uid://dkovxnh66vmdr" path="res://Assets/Sprites/UI/Paused_Menu/Quit_Game.png" id="21_6kfb2"]
+[ext_resource type="Texture2D" uid="uid://d3tfa8rp2uir8" path="res://Assets/Sprites/UI/Paused_Menu/Quit_Game-Selected.png" id="22_essrr"]
+[ext_resource type="Texture2D" uid="uid://cjo3dyn2s7a3y" path="res://Assets/Sprites/UI/Paused_Menu/Quit_Game-Hover.png" id="23_3dl8w"]
+[ext_resource type="AudioStream" uid="uid://0yas1r1x84cf" path="res://Assets/music/UISFX/digital-click-357350.mp3" id="25_200py"]
+[ext_resource type="Texture2D" uid="uid://dvw5tyb2knu48" path="res://Assets/Sprites/UI/map/ForethiilMap.png" id="25_gu2xi"]
+[ext_resource type="Texture2D" uid="uid://byt1eqky1jc7i" path="res://Assets/Sprites/UI/Load menu/Confirm_container.png" id="25_vtf2a"]
+[ext_resource type="AudioStream" uid="uid://c86q178tdsebx" path="res://Assets/music/UISFX/menu-selection-102220.mp3" id="26_gu2xi"]
+[ext_resource type="FontFile" uid="uid://d2hodyyurcqr5" path="res://Assets/Fonts/GallaeciaForte.ttf" id="26_is817"]
+[ext_resource type="Texture2D" uid="uid://wmnwlu7a1qqi" path="res://Assets/Sprites/UI/Load menu/YesButton.png" id="27_587kp"]
+[ext_resource type="Texture2D" uid="uid://bwcup646ajwf8" path="res://Assets/Sprites/UI/Load menu/YesButton-Selected.png" id="28_2ey0l"]
+[ext_resource type="Texture2D" uid="uid://cj5fx0ac7gp1t" path="res://Assets/Sprites/UI/Load menu/YesButton-Hover.png" id="29_mymqm"]
+[ext_resource type="Texture2D" uid="uid://btmt4fi8dq6j0" path="res://Assets/Sprites/UI/Load menu/NoButton.png" id="30_0ypuf"]
+[ext_resource type="Texture2D" uid="uid://dd4jivqkfyurp" path="res://Assets/Sprites/UI/Load menu/NoButton-selected.png" id="31_ru8xf"]
+[ext_resource type="Texture2D" uid="uid://2r1addt47kie" path="res://Assets/Sprites/UI/Load menu/NoButton-hover.png" id="32_gby00"]
+[ext_resource type="Texture2D" uid="uid://bjetf0jp5fg8y" path="res://Assets/Sprites/UI/map/Forethill_Panel.png" id="34_mymqm"]
+[ext_resource type="Texture2D" uid="uid://cepqgqh4agjy7" path="res://Assets/Sprites/UI/map/ForethiilMap_Compass_Panel.png" id="35_0ypuf"]
+[ext_resource type="AudioStream" uid="uid://dbt76nhpcpoco" path="res://Assets/music/UISFX/pause-89443.mp3" id="36_587kp"]
+[ext_resource type="AudioStream" uid="uid://dlvkp156wjdrl" path="res://Assets/music/UISFX/unpause-106278.mp3" id="37_2ey0l"]
+[ext_resource type="Script" uid="uid://408d15f8xhq0" path="res://Scenes/UI_Scenes/inventory_list.gd" id="38_50ll0"]
+[ext_resource type="Texture2D" uid="uid://ckj870djvyaog" path="res://Assets/Sprites/UI/Inventory_Menu/Gold.png" id="40_77qfc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jse0a"]
+texture = ExtResource("1_u3t1m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tlpbd"]
+texture = ExtResource("2_v21s0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_552bb"]
+texture = ExtResource("25_vtf2a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pciv7"]
+texture = ExtResource("1_u3t1m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7whwn"]
+texture = ExtResource("17_r53w3")
+
+[sub_resource type="ImageTexture" id="ImageTexture_50ll0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50ll0"]
+bg_color = Color(0.352941, 0.211765, 0.0784314, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_77qfc"]
+bg_color = Color(1, 0.878431, 0.717647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r53w3"]
+bg_color = Color(0.987984, 0.897711, 0.569935, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjo3n"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="Theme" id="Theme_67oe2"]
+VScrollBar/icons/decrement = SubResource("ImageTexture_50ll0")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_50ll0")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_50ll0")
+VScrollBar/icons/increment = SubResource("ImageTexture_50ll0")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_50ll0")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_50ll0")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_50ll0")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_77qfc")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_r53w3")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_gjo3n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ip7j"]
+texture = ExtResource("18_gjo3n")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r53w3"]
+atlas = ExtResource("40_77qfc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjo3n"]
+atlas = ExtResource("40_77qfc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67oe2"]
+atlas = ExtResource("40_77qfc")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pciv7"]
+atlas = ExtResource("40_77qfc")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7whwn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r53w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjo3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67oe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pciv7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ya8hs"]
+texture = ExtResource("25_gu2xi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ru8xf"]
+texture = ExtResource("34_mymqm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gby00"]
+texture = ExtResource("35_0ypuf")
+
+[node name="pause_menu" type="CanvasLayer"]
+process_mode = 3
+layer = 128
+visible = false
+script = ExtResource("1_essrr")
+
+[node name="BackDrop" type="ColorRect" parent="."]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.447059)
+
+[node name="Main_Panel" type="Panel" parent="."]
+process_mode = 3
+anchors_preset = -1
+anchor_left = 0.229167
+anchor_top = 0.0493827
+anchor_right = 0.774479
+anchor_bottom = 0.949383
+offset_left = -9.0004
+offset_top = 8.00001
+offset_right = 60.7996
+offset_bottom = 72.8
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jse0a")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Main_Panel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.127348
+anchor_top = 0.123457
+anchor_right = 0.862305
+anchor_bottom = 0.302469
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_tlpbd")
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="TextureButton" parent="Main_Panel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0382044
+anchor_top = 0.0411523
+anchor_right = 0.129895
+anchor_bottom = 0.146091
+offset_right = -48.0
+offset_bottom = -51.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_x5bx2")
+texture_pressed = ExtResource("4_vyq8u")
+texture_hover = ExtResource("5_r3wnr")
+metadata/_edit_use_anchors_ = true
+
+[node name="EquipmentButton" type="TextureButton" parent="Main_Panel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.275072
+anchor_top = 0.328704
+anchor_right = 0.75215
+anchor_bottom = 0.405864
+offset_right = -224.0
+offset_bottom = -32.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("6_jpyed")
+texture_pressed = ExtResource("7_p76lp")
+texture_hover = ExtResource("8_2a1vs")
+metadata/_edit_use_anchors_ = true
+
+[node name="InventoryButton" type="TextureButton" parent="Main_Panel"]
+process_mode = 3
+layout_mode = 0
+anchor_left = 0.253104
+anchor_top = 0.42524
+anchor_right = 0.721586
+anchor_bottom = 0.490055
+offset_left = -1.52588e-05
+offset_right = -218.0
+offset_bottom = -28.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("9_tlpbd")
+texture_pressed = ExtResource("10_35jee")
+texture_hover = ExtResource("11_fapb8")
+metadata/_edit_use_anchors_ = true
+
+[node name="StatusButton" type="TextureButton" parent="Main_Panel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34384
+anchor_top = 0.521262
+anchor_right = 0.631805
+anchor_bottom = 0.586077
+offset_left = -1.52588e-05
+offset_right = -134.0
+offset_bottom = -28.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("9_vyq8u")
+texture_pressed = ExtResource("10_r3wnr")
+texture_hover = ExtResource("11_jpyed")
+metadata/_edit_use_anchors_ = true
+
+[node name="QuestLogButton" type="TextureButton" parent="Main_Panel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267431
+anchor_top = 0.617284
+anchor_right = 0.701528
+anchor_bottom = 0.682099
+offset_left = 1.52588e-05
+offset_right = -202.0
+offset_bottom = -28.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("12_p76lp")
+texture_pressed = ExtResource("13_2a1vs")
+texture_hover = ExtResource("14_jse0a")
+metadata/_edit_use_anchors_ = true
+
+[node name="MapButton" type="TextureButton" parent="Main_Panel"]
+process_mode = 3
+layout_mode = 0
+anchor_left = 0.394779
+anchor_top = 0.713306
+anchor_right = 0.566699
+anchor_bottom = 0.778121
+offset_right = -80.0
+offset_bottom = -28.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("18_ixdti")
+texture_pressed = ExtResource("19_kjdl3")
+texture_hover = ExtResource("20_xepaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="QuitGameButton" type="TextureButton" parent="Main_Panel"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.267431
+anchor_top = 0.809328
+anchor_right = 0.705826
+anchor_bottom = 0.874143
+offset_right = -204.0
+offset_bottom = -28.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("21_6kfb2")
+texture_pressed = ExtResource("22_essrr")
+texture_hover = ExtResource("23_3dl8w")
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit_Confirm" type="Panel" parent="Main_Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.114613
+anchor_top = 0.41358
+anchor_right = 1.4255
+anchor_bottom = 0.885802
+offset_right = -408.0
+offset_bottom = -120.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_552bb")
+metadata/_edit_use_anchors_ = true
+
+[node name="Input Blocker" type="Control" parent="Main_Panel/Quit_Confirm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -373.0
+offset_top = -304.0
+offset_right = 400.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="quitgame?" type="Label" parent="Main_Panel/Quit_Confirm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0350638
+anchor_top = 0.0884111
+anchor_right = 1.02126
+anchor_bottom = 0.448626
+scale = Vector2(0.95, 0.95)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("26_is817")
+theme_override_font_sizes/font_size = 32
+text = "Quit Game and 
+return to Title Screen?"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="QGYesButton" type="TextureButton" parent="Main_Panel/Quit_Confirm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.175322
+anchor_top = 0.512545
+anchor_right = 0.427788
+anchor_bottom = 0.867384
+offset_right = -64.0
+offset_bottom = -33.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("27_587kp")
+texture_pressed = ExtResource("28_2ey0l")
+texture_hover = ExtResource("29_mymqm")
+metadata/_edit_use_anchors_ = true
+
+[node name="QGNoButton" type="TextureButton" parent="Main_Panel/Quit_Confirm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.561034
+anchor_top = 0.518519
+anchor_right = 0.813499
+anchor_bottom = 0.873357
+offset_right = -64.0
+offset_bottom = -33.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("30_0ypuf")
+texture_pressed = ExtResource("31_ru8xf")
+texture_hover = ExtResource("32_gby00")
+metadata/_edit_use_anchors_ = true
+
+[node name="InventoryPanel" type="Panel" parent="."]
+visible = false
+z_index = 1
+anchors_preset = -1
+anchor_left = 0.173611
+anchor_top = 0.0740741
+anchor_right = 0.819444
+anchor_bottom = 0.950617
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_pciv7")
+
+[node name="AllButton" type="TextureButton" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0739247
+anchor_top = 0.239437
+anchor_right = 0.138441
+anchor_bottom = 0.295775
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("13_ct3r6")
+texture_pressed = ExtResource("14_50ll0")
+texture_hover = ExtResource("15_77qfc")
+
+[node name="All" type="Label" parent="InventoryPanel/AllButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 6.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("19_67oe2")
+text = "All"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeyItemsButton" type="TextureButton" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177419
+anchor_top = 0.239437
+anchor_right = 0.241935
+anchor_bottom = 0.295775
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("13_ct3r6")
+texture_pressed = ExtResource("14_50ll0")
+texture_hover = ExtResource("15_77qfc")
+
+[node name="KeyItems" type="Label" parent="InventoryPanel/KeyItemsButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 15.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("19_67oe2")
+text = "Key Items"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AidButton" type="TextureButton" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.280914
+anchor_top = 0.239437
+anchor_right = 0.34543
+anchor_bottom = 0.295775
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("13_ct3r6")
+texture_pressed = ExtResource("14_50ll0")
+texture_hover = ExtResource("15_77qfc")
+
+[node name="Aid" type="Label" parent="InventoryPanel/AidButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 7.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.75)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("19_67oe2")
+text = "Aid"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EquipButton" type="TextureButton" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.385753
+anchor_top = 0.239437
+anchor_right = 0.450269
+anchor_bottom = 0.295775
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("13_ct3r6")
+texture_pressed = ExtResource("14_50ll0")
+texture_hover = ExtResource("15_77qfc")
+
+[node name="Equipment" type="Label" parent="InventoryPanel/EquipButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 4.66667
+offset_right = 22.0
+offset_bottom = 4.66667
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.65, 0.65)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("19_67oe2")
+text = "Equipment"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Inventory" type="Label" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.354839
+anchor_top = 0.0792254
+anchor_right = 0.645161
+anchor_bottom = 0.135563
+offset_right = -108.0
+offset_bottom = -16.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("26_is817")
+text = "Inventory"
+
+[node name="InventoryListPanel" type="Panel" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.063172
+anchor_top = 0.352113
+anchor_right = 0.494624
+anchor_bottom = 0.933099
+theme_override_styles/panel = SubResource("StyleBoxTexture_7whwn")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InventoryPanel/InventoryListPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0181121
+anchor_top = 0.0131424
+anchor_right = 1.0217
+anchor_bottom = 0.987614
+theme = SubResource("Theme_67oe2")
+
+[node name="InventoryList" type="VBoxContainer" parent="InventoryPanel/InventoryListPanel/ScrollContainer" node_paths=PackedStringArray("item_picture_panel", "item_name", "description_label")]
+layout_mode = 2
+script = ExtResource("38_50ll0")
+item_picture_panel = NodePath("../../../ItemDescritionPanel/itemPicture")
+item_name = NodePath("../../../ItemDescritionPanel/ItemName")
+description_label = NodePath("../../../ItemDescritionPanel/ScrollContainer/DescriptionLabel")
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemDescritionPanel" type="Panel" parent="InventoryPanel"]
+layout_mode = 0
+anchor_left = 0.537634
+anchor_top = 0.198944
+anchor_right = 0.935484
+anchor_bottom = 0.915493
+offset_left = -3.05176e-05
+theme_override_styles/panel = SubResource("StyleBoxTexture_4ip7j")
+
+[node name="ItemName" type="Label" parent="InventoryPanel/ItemDescritionPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.390664
+anchor_right = 0.874999
+anchor_bottom = 0.45946
+offset_right = -111.0
+offset_bottom = -14.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("19_67oe2")
+text = "Item name"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="itemPicture" type="TextureRect" parent="InventoryPanel/ItemDescritionPanel"]
+layout_mode = 0
+anchor_left = 0.351353
+anchor_top = 0.149877
+anchor_right = 0.641893
+anchor_bottom = 0.361179
+offset_right = -1.52588e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InventoryPanel/ItemDescritionPanel"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 191.0
+offset_right = 248.0
+offset_bottom = 343.0
+
+[node name="DescriptionLabel" type="Label" parent="InventoryPanel/ItemDescritionPanel/ScrollContainer"]
+custom_minimum_size = Vector2(184, 150)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("19_67oe2")
+text = "Item Description
+Lorem ipsum yadda yadda"
+vertical_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Inventorybackbutton" type="TextureButton" parent="InventoryPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0322581
+anchor_top = 0.0422535
+anchor_right = 0.11828
+anchor_bottom = 0.161972
+offset_right = -48.0
+offset_bottom = -51.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_x5bx2")
+texture_pressed = ExtResource("4_vyq8u")
+texture_hover = ExtResource("5_r3wnr")
+
+[node name="GoldLabel" type="Label" parent="InventoryPanel"]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 32.0
+offset_right = 672.0
+offset_bottom = 55.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("19_67oe2")
+text = "9999"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="InventoryPanel"]
+position = Vector2(617, 52)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_7whwn")
+autoplay = "default"
+frame_progress = 0.604882
+
+[node name="Map_Panel" type="Panel" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 152.0
+offset_top = 80.0
+offset_right = -161.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ya8hs")
+
+[node name="Mapbackbutton" type="TextureButton" parent="Map_Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0229555
+anchor_top = 0.0285714
+anchor_right = 0.114778
+anchor_bottom = 0.15
+offset_right = -48.0
+offset_bottom = -51.0
+scale = Vector2(4, 4)
+texture_normal = ExtResource("3_x5bx2")
+texture_pressed = ExtResource("4_vyq8u")
+texture_hover = ExtResource("5_r3wnr")
+metadata/_edit_use_anchors_ = true
+
+[node name="Nameplate" type="Panel" parent="Map_Panel"]
+layout_mode = 0
+anchor_left = 0.715137
+anchor_top = 0.813559
+anchor_right = 0.982122
+anchor_bottom = 0.966102
+theme_override_styles/panel = SubResource("StyleBoxTexture_ru8xf")
+metadata/_edit_use_anchors_ = true
+
+[node name="compass" type="Panel" parent="Map_Panel"]
+layout_mode = 0
+anchor_left = 0.0381406
+anchor_top = 0.741525
+anchor_right = 0.158522
+anchor_bottom = 0.955508
+theme_override_styles/panel = SubResource("StyleBoxTexture_gby00")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Map_Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.190703
+anchor_top = 0.152542
+anchor_right = 0.290822
+anchor_bottom = 0.177966
+offset_right = 28.0
+offset_bottom = 4.0
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("26_is817")
+text = "Green veil"
+metadata/_edit_use_anchors_ = true
+
+[node name="SFX" type="Node2D" parent="."]
+process_mode = 3
+
+[node name="ClickSFX" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("25_200py")
+
+[node name="HoverSFX" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("26_gu2xi")
+
+[node name="PauseSFX" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("36_587kp")
+
+[node name="UnpauseSFX" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("37_2ey0l")
+
+[connection signal="mouse_entered" from="Main_Panel/BackButton" to="." method="_on_back_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/EquipmentButton" to="." method="_on_equipment_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/EquipmentButton" to="." method="_on_equipment_button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/InventoryButton" to="." method="_on_inventory_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/InventoryButton" to="." method="_on_inventory_button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/StatusButton" to="." method="_on_status_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/StatusButton" to="." method="_on_status_button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/QuestLogButton" to="." method="_on_quest_log_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/QuestLogButton" to="." method="_on_quest_log_button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/MapButton" to="." method="_on_map_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/MapButton" to="." method="_on_map_button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/QuitGameButton" to="." method="_on_quit_game_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/QuitGameButton" to="." method="_on_quit_game_button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/Quit_Confirm/QGYesButton" to="." method="_on_qg_yes_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/Quit_Confirm/QGYesButton" to="." method="_on_qg_yes_button_pressed"]
+[connection signal="mouse_entered" from="Main_Panel/Quit_Confirm/QGNoButton" to="." method="_on_qg_no_button_mouse_entered"]
+[connection signal="pressed" from="Main_Panel/Quit_Confirm/QGNoButton" to="." method="_on_qg_no_button_pressed"]
+[connection signal="mouse_entered" from="InventoryPanel/AllButton" to="." method="_on_all_button_mouse_entered"]
+[connection signal="pressed" from="InventoryPanel/AllButton" to="." method="_on_all_button_pressed"]
+[connection signal="mouse_entered" from="InventoryPanel/KeyItemsButton" to="." method="_on_key_items_button_mouse_entered"]
+[connection signal="pressed" from="InventoryPanel/KeyItemsButton" to="." method="_on_key_items_button_pressed"]
+[connection signal="mouse_entered" from="InventoryPanel/AidButton" to="." method="_on_aid_button_mouse_entered"]
+[connection signal="pressed" from="InventoryPanel/AidButton" to="." method="_on_aid_button_pressed"]
+[connection signal="mouse_entered" from="InventoryPanel/EquipButton" to="." method="_on_equip_button_mouse_entered"]
+[connection signal="pressed" from="InventoryPanel/EquipButton" to="." method="_on_equip_button_pressed"]
+[connection signal="mouse_entered" from="InventoryPanel/Inventorybackbutton" to="." method="_on_inventorybackbutton_mouse_entered"]
+[connection signal="pressed" from="InventoryPanel/Inventorybackbutton" to="." method="_on_inventorybackbutton_pressed"]
+[connection signal="mouse_entered" from="Map_Panel/Mapbackbutton" to="." method="_on_mapbackbutton_mouse_entered"]
+[connection signal="pressed" from="Map_Panel/Mapbackbutton" to="." method="_on_mapbackbutton_pressed"]

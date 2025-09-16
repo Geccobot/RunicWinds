@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://rsdx2lcbswy"]
+
+[ext_resource type="Script" uid="uid://cuv5lg4um40ro" path="res://item_data.gd" id="1_fqfys"]
+[ext_resource type="Texture2D" uid="uid://ji1ycb7rnusi" path="res://Assets/Sprites/Items/Key_Items/lifegem.png" id="1_p81m3"]
+
+[resource]
+script = ExtResource("1_fqfys")
+id = &"lifegem"
+display_name = "Life Gem"
+icon = ExtResource("1_p81m3")
+description = "A gem with the \"Life\" rune embossed on it. Used to upgrade the effects of the \"Heal\" incantation.
+
+The \"Life\" rune is said to resonate the strongest with those of a pure spirit, however, there has been no real presence of it's effect in centuries..."
+max_stack = 99
+type = &"keyitem"
+metadata/_custom_type_script = "uid://cuv5lg4um40ro"

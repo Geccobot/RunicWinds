@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7ao4wc0120tk"]
+
+[ext_resource type="Texture2D" uid="uid://0mpbeb63bf48" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_items.png" id="1_ww6e5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww6e5"]
+atlas = ExtResource("1_ww6e5")
+region = Rect2(124, 80, 36, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix1u5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ww6e5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GV_crate_bunch2" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -17)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, 19)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ix1u5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-10, 11, -15, 11, -16, 15, -16, 25, -16, 35, -10, 35, 0, 36, 1, 42, 24, 43, 24, 28, 19, 21, 19, 12, 6, 11, -2, 11)

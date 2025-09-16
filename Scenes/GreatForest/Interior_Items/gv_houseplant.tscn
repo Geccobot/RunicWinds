@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2a7i7b5rmr4r"]
+
+[ext_resource type="Texture2D" uid="uid://0mpbeb63bf48" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_items.png" id="1_01vob"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01vob"]
+atlas = ExtResource("1_01vob")
+region = Rect2(96, 48, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix1u5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01vob")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g8ye4"]
+radius = 4.66667
+height = 9.33333
+
+[node name="GV_houseplant" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, -9)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_ix1u5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 8)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CapsuleShape2D_g8ye4")

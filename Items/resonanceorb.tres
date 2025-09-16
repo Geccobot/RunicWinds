@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bjh5ntmu5i43a"]
+
+[ext_resource type="Script" uid="uid://cuv5lg4um40ro" path="res://item_data.gd" id="1_fnsea"]
+[ext_resource type="Texture2D" uid="uid://df3uys16vcnm8" path="res://Assets/Sprites/Items/Key_Items/ResonanceOrb.png" id="1_yel50"]
+
+[resource]
+script = ExtResource("1_fnsea")
+id = &"resonanceorb"
+display_name = "Resonance Orb"
+icon = ExtResource("1_yel50")
+description = "An orb teeming with mana. Can be used to enhance attributes of a Rune Wielder. 
+
+These orbs are of no use to those who are not in resonance with their innate  Runic Mana. "
+max_stack = 99
+type = &"keyitem"
+metadata/_custom_type_script = "uid://cuv5lg4um40ro"

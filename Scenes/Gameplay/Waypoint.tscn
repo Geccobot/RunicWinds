@@ -1,0 +1,436 @@
+[gd_scene load_steps=34 format=3 uid="uid://dtowdsracvtbj"]
+
+[ext_resource type="Texture2D" uid="uid://cb0knw40dvgrp" path="res://Assets/Sprites/GamePlay/Waypoint.png" id="1_g1xva"]
+[ext_resource type="Script" uid="uid://t1dp01ecyn5o" path="res://Scenes/Gameplay/waypoint.gd" id="1_uloqs"]
+[ext_resource type="AudioStream" uid="uid://b5iqpide4n2xo" path="res://Assets/music/GamePlaySFX/abstract-magic-whoosh-03-204485.mp3" id="3_6x0li"]
+[ext_resource type="AudioStream" uid="uid://bntha3wqan8wg" path="res://Assets/music/GamePlaySFX/harmonic-hum-100812.mp3" id="3_uhhjh"]
+[ext_resource type="FontFile" uid="uid://d2hodyyurcqr5" path="res://Assets/Fonts/GallaeciaForte.ttf" id="5_dxf84"]
+[ext_resource type="AudioStream" uid="uid://0yas1r1x84cf" path="res://Assets/music/UISFX/digital-click-357350.mp3" id="5_obicy"]
+[ext_resource type="Texture2D" uid="uid://byt1eqky1jc7i" path="res://Assets/Sprites/UI/Load menu/Confirm_container.png" id="5_ofwh8"]
+[ext_resource type="AudioStream" uid="uid://c86q178tdsebx" path="res://Assets/music/UISFX/menu-selection-102220.mp3" id="6_npipf"]
+[ext_resource type="AudioStream" uid="uid://d4f0fh0oscj6c" path="res://Assets/music/GamePlaySFX/copper-bell-ding-2-214922.mp3" id="7_apiol"]
+[ext_resource type="Texture2D" uid="uid://d3wab06uwsudg" path="res://Assets/Sprites/UI/misc_menu/Pause_backdrop.png" id="7_f8avs"]
+[ext_resource type="FontFile" uid="uid://d3141f31fy1qx" path="res://Assets/Fonts/windows_command_prompt.ttf" id="11_vdu6t"]
+[ext_resource type="Texture2D" uid="uid://dttjoavje6na3" path="res://Assets/Sprites/UI/Load menu/back_button.png" id="14_p5vus"]
+[ext_resource type="Texture2D" uid="uid://cvfuc7rvwn8cc" path="res://Assets/Sprites/UI/Load menu/back_button_selected.png" id="15_qcv88"]
+[ext_resource type="Texture2D" uid="uid://wrefjw2jswpn" path="res://Assets/Sprites/UI/Load menu/back_button_hover.png" id="16_os1gv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc4yr"]
+atlas = ExtResource("1_g1xva")
+region = Rect2(448, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofwh8"]
+atlas = ExtResource("1_g1xva")
+region = Rect2(256, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8avs"]
+atlas = ExtResource("1_g1xva")
+region = Rect2(320, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3t1f"]
+atlas = ExtResource("1_g1xva")
+region = Rect2(384, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uloqs"]
+atlas = ExtResource("1_g1xva")
+region = Rect2(0, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x0li"]
+atlas = ExtResource("1_g1xva")
+region = Rect2(64, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhhjh"]
+atlas = ExtResource("1_g1xva")
+region = Rect2(128, 0, 64, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxf84"]
+atlas = ExtResource("1_g1xva")
+region = Rect2(192, 0, 64, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc4yr")
+}],
+"loop": false,
+"name": &"Activated",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofwh8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8avs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3t1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fc4yr")
+}],
+"loop": false,
+"name": &"activated",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uloqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x0li")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhhjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxf84")
+}],
+"loop": false,
+"name": &"detected",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g1xva"]
+size = Vector2(10.7, 10.4)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uhhjh"]
+b = Vector2(3.16446, -0.29436)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6x0li"]
+radius = 4.0
+height = 26.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f8avs"]
+texture = ExtResource("5_ofwh8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3t1f"]
+texture = ExtResource("7_f8avs")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cojwm"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tr8lt"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4rits"]
+
+[sub_resource type="Gradient" id="Gradient_2idak"]
+colors = PackedColorArray(0, 0.654902, 0.654902, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_apiol"]
+gradient = SubResource("Gradient_2idak")
+fill = 1
+fill_from = Vector2(0.495, 0.51)
+fill_to = Vector2(0.85, 0.145)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_uloqs")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="waypoint" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, -28)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+animation = &"detected"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1.05697e-06, -18)
+rotation = -3.14159
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_g1xva")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-16, 1)
+rotation = 0.329223
+scale = Vector2(0.170781, 5.03068)
+shape = SubResource("SegmentShape2D_uhhjh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(16, -0.999999)
+rotation = 2.75682
+scale = Vector2(0.170781, 5.03068)
+shape = SubResource("SegmentShape2D_uhhjh")
+
+[node name="Area2D" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D"]
+position = Vector2(0, -5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_6x0li")
+debug_color = Color(3.85046e-07, 0.639059, 0.370057, 0.42)
+
+[node name="DetectedSFX" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("3_uhhjh")
+volume_db = 4.0
+
+[node name="ActivateSFX" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("3_6x0li")
+
+[node name="ClickSFX" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+position = Vector2(104, 359)
+stream = ExtResource("5_obicy")
+
+[node name="HoverSFX" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("6_npipf")
+
+[node name="ResonateSFX" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("7_apiol")
+volume_db = 3.25
+
+[node name="ActivatedPanel" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="ActivatedPanel"]
+anchors_preset = -1
+anchor_left = 0.347222
+anchor_top = 0.628086
+anchor_right = 0.646509
+anchor_bottom = 0.787908
+offset_top = -3.05176e-05
+offset_right = -81.7783
+offset_bottom = -24.5646
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.31094, 1.31094)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_f8avs")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ActivatedPanel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.139221
+anchor_top = 0.318645
+anchor_right = 0.869258
+anchor_bottom = 0.521177
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("5_dxf84")
+theme_override_font_sizes/font_size = 16
+text = "Activate waypoint"
+metadata/_edit_use_anchors_ = true
+
+[node name="Resonate Panel" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="Resonate Panel"]
+anchors_preset = -1
+anchor_left = 0.347222
+anchor_top = 0.628086
+anchor_right = 0.646509
+anchor_bottom = 0.787908
+offset_top = -3.05176e-05
+offset_right = -81.7783
+offset_bottom = -24.5646
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.31094, 1.31094)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_f8avs")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Resonate Panel/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.232034
+anchor_top = 0.318645
+anchor_right = 0.785266
+anchor_bottom = 0.622442
+offset_right = -48.5
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("5_dxf84")
+theme_override_font_sizes/font_size = 16
+text = "Resonate"
+metadata/_edit_use_anchors_ = true
+
+[node name="Resonate Menu" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Resonate Menu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.447059)
+
+[node name="input blocker" type="Control" parent="Resonate Menu"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Resonate Menu"]
+anchors_preset = -1
+anchor_left = 0.215278
+anchor_top = 0.197531
+anchor_right = 0.792884
+anchor_bottom = 0.772056
+offset_right = -186.403
+offset_bottom = -104.292
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.38915, 1.38915)
+theme_override_styles/panel = SubResource("StyleBoxTexture_n3t1f")
+metadata/_edit_use_anchors_ = true
+
+[node name="WarpButton" type="TextureButton" parent="Resonate Menu/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0721369
+anchor_top = 0.410969
+anchor_right = 0.268124
+anchor_bottom = 0.59706
+offset_right = -61.8777
+offset_bottom = -32.8725
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.93368, 2.93368)
+texture_normal = SubResource("CompressedTexture2D_cojwm")
+texture_pressed = SubResource("CompressedTexture2D_tr8lt")
+texture_hover = SubResource("CompressedTexture2D_4rits")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Resonate Menu/Panel/WarpButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0995433
+anchor_top = 0.204877
+anchor_right = 0.92093
+anchor_bottom = 0.875843
+offset_right = 26.7156
+offset_bottom = 11.5936
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.495932, 0.495932)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("5_dxf84")
+theme_override_font_sizes/font_size = 16
+text = "Warp"
+metadata/_edit_use_anchors_ = true
+
+[node name="UpgradeBaseRunes" type="TextureButton" parent="Resonate Menu/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.290051
+anchor_top = 0.410969
+anchor_right = 0.486037
+anchor_bottom = 0.59706
+offset_right = -61.8777
+offset_bottom = -32.8725
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.26517, 2.93368)
+texture_normal = SubResource("CompressedTexture2D_cojwm")
+texture_pressed = SubResource("CompressedTexture2D_tr8lt")
+texture_hover = SubResource("CompressedTexture2D_4rits")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Resonate Menu/Panel/UpgradeBaseRunes"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0738404
+anchor_top = 0.202078
+anchor_right = 0.924301
+anchor_bottom = 0.736407
+offset_right = 113.785
+offset_bottom = 25.9164
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.193012, 0.259532)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("5_dxf84")
+theme_override_font_sizes/font_size = 16
+text = "upgrade base
+runes"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="UpgradeHealingRuneButton" type="TextureButton" parent="Resonate Menu/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.59513
+anchor_top = 0.410969
+anchor_right = 0.791117
+anchor_bottom = 0.59706
+offset_right = -61.8777
+offset_bottom = -32.8725
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4.54863, 2.91321)
+texture_normal = SubResource("CompressedTexture2D_cojwm")
+texture_pressed = SubResource("CompressedTexture2D_tr8lt")
+texture_hover = SubResource("CompressedTexture2D_4rits")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Resonate Menu/Panel/UpgradeHealingRuneButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0642929
+anchor_top = 0.203497
+anchor_right = 1.97725
+anchor_bottom = 0.737827
+offset_right = 113.785
+offset_bottom = 25.9164
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.159885, 0.214987)
+theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("5_dxf84")
+theme_override_font_sizes/font_size = 16
+text = "upgrade Healing
+rune"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="saving game" type="Label" parent="Resonate Menu/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0334029
+anchor_top = 0.906716
+anchor_right = 0.181628
+anchor_bottom = 0.958955
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.384314, 0.121569, 0.0196078, 1)
+theme_override_fonts/font = ExtResource("11_vdu6t")
+text = "GAME SAVED"
+metadata/_edit_use_anchors_ = true
+
+[node name="BackButton" type="TextureButton" parent="Resonate Menu"]
+anchors_preset = -1
+anchor_left = 0.243056
+anchor_top = 0.234568
+anchor_right = 0.283331
+anchor_bottom = 0.310642
+offset_right = -30.3971
+offset_bottom = -32.2961
+scale = Vector2(2.89975, 2.89975)
+texture_normal = ExtResource("14_p5vus")
+texture_pressed = ExtResource("15_qcv88")
+texture_hover = ExtResource("16_os1gv")
+metadata/_edit_use_anchors_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(1.81899e-12, 8)
+rotation = 1.57079
+scale = Vector2(1.13958, 1.50384)
+texture = SubResource("GradientTexture2D_apiol")
+
+[connection signal="body_entered" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="StaticBody2D/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="Resonate Menu/BackButton" to="." method="_on_back_button_pressed"]

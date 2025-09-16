@@ -1,0 +1,112 @@
+[gd_scene load_steps=14 format=3 uid="uid://5quqgmlk87a8"]
+
+[ext_resource type="Script" uid="uid://b7c8b3hoks0tj" path="res://Scenes/Gameplay/ItemPUs/small_chest.gd" id="1_t7xqx"]
+[ext_resource type="Texture2D" uid="uid://dyfqcaan650hv" path="res://Assets/Sprites/GamePlay/itemPUs/Small_Chest.png" id="2_ewrrh"]
+[ext_resource type="AudioStream" uid="uid://dpfgtua6vbnc0" path="res://Assets/music/GamePlaySFX/ItemPUs/coin-2-47744.mp3" id="3_ewrrh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8w27"]
+atlas = ExtResource("2_ewrrh")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svbhn"]
+atlas = ExtResource("2_ewrrh")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fs0u1"]
+atlas = ExtResource("2_ewrrh")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oerfo"]
+atlas = ExtResource("2_ewrrh")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5j4p"]
+atlas = ExtResource("2_ewrrh")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1u25"]
+atlas = ExtResource("2_ewrrh")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qdquy"]
+atlas = ExtResource("2_ewrrh")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8w27")
+}],
+"loop": false,
+"name": &"closed",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svbhn")
+}],
+"loop": false,
+"name": &"open",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fs0u1")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_oerfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5j4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1u25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qdquy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svbhn")
+}],
+"loop": false,
+"name": &"opening",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_grbqy"]
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rcpol"]
+height = 22.0
+
+[node name="SmallChest" type="Node2D"]
+script = ExtResource("1_t7xqx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="SmallChest" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, -8)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+animation = &"closed"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 3)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_grbqy")
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+position = Vector2(0, 19)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_rcpol")
+debug_color = Color(0.626708, 0.531333, 7.70092e-07, 0.42)
+
+[node name="OpenSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ewrrh")
+
+[connection signal="animation_finished" from="StaticBody2D/SmallChest" to="." method="_on_large_chest_animation_finished"]
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]
+[connection signal="body_exited" from="interactable_area" to="." method="_on_interactable_area_body_exited"]

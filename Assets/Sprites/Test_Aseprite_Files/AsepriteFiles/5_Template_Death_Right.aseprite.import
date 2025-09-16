@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://be60lhis6iitk"
+path="res://.godot/imported/5_Template_Death_Right.aseprite-6f6da69463ec2692cf7d95f06737af78.res"
+
+[deps]
+
+source_file="res://Assets/Sprites/Test_Aseprite_Files/AsepriteFiles/5_Template_Death_Right.aseprite"
+dest_files=["res://.godot/imported/5_Template_Death_Right.aseprite-6f6da69463ec2692cf7d95f06737af78.res"]
+
+[params]
+

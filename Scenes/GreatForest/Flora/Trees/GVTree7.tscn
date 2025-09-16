@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://44ovwjymis4c"]
+
+[ext_resource type="Texture2D" uid="uid://cqbrvm40qllfg" path="res://Assets/Sprites/Green Veil/Environment/Trees.png" id="1_8oeid"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8oeid"]
+atlas = ExtResource("1_8oeid")
+region = Rect2(257, 76, 58, 116)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8oeid")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ae5wn"]
+radius = 16.0
+height = 52.0
+
+[node name="GV_Tree" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, -85)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 12)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ae5wn")

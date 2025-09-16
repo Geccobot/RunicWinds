@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://bq1farausgdsb"]
+
+[ext_resource type="Texture2D" uid="uid://b8wh5m3m4hhqi" path="res://Assets/Sprites/Green Veil/Environment/Objects.png" id="1_li1pk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aootu"]
+atlas = ExtResource("1_li1pk")
+region = Rect2(0, 64, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4u8tt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aootu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iu2ua"]
+radius = 13.0384
+
+[sub_resource type="Gradient" id="Gradient_li1pk"]
+offsets = PackedFloat32Array(0, 0.56)
+colors = PackedColorArray(0.591, 0.381, 0.18, 0.872, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_aootu"]
+gradient = SubResource("Gradient_li1pk")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="GV_Lampost" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -18)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(1.90735e-06, -40)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_4u8tt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 25)
+shape = SubResource("CircleShape2D_iu2ua")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -75)
+scale = Vector2(1.70313, 1.70313)
+texture = SubResource("GradientTexture2D_aootu")
