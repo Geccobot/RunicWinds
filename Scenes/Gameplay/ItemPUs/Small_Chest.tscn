@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://5quqgmlk87a8"]
 
 [ext_resource type="Script" uid="uid://b7c8b3hoks0tj" path="res://Scenes/Gameplay/ItemPUs/small_chest.gd" id="1_t7xqx"]
-[ext_resource type="Texture2D" uid="uid://dyfqcaan650hv" path="res://Assets/Sprites/GamePlay/itemPUs/Small_Chest.png" id="2_ewrrh"]
-[ext_resource type="AudioStream" uid="uid://dpfgtua6vbnc0" path="res://Assets/music/GamePlaySFX/ItemPUs/coin-2-47744.mp3" id="3_ewrrh"]
+[ext_resource type="Texture2D" uid="uid://dyfqcaan650hv" path="res://Assets - Copy/Sprites/GamePlay/itemPUs/Small_Chest.png" id="2_ewrrh"]
+[ext_resource type="AudioStream" uid="uid://dpfgtua6vbnc0" path="res://Assets - Copy/music/GamePlaySFX/ItemPUs/coin-2-47744.mp3" id="3_ewrrh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d8w27"]
 atlas = ExtResource("2_ewrrh")

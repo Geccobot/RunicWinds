@@ -1,0 +1,135 @@
+[gd_scene load_steps=20 format=3 uid="uid://bepjykjjnlvlo"]
+
+[ext_resource type="Script" uid="uid://b8rjkhevwopot" path="res://Player/Scripts/resources.gd" id="1_vadp8"]
+[ext_resource type="Script" uid="uid://bqkd1gfx0nqjb" path="res://Player/Scripts/combat.gd" id="2_16now"]
+[ext_resource type="Script" uid="uid://r64b460xwopc" path="res://Player/Scripts/stats.gd" id="3_j8rtd"]
+[ext_resource type="Script" uid="uid://8j4hqth3jtld" path="res://Scripts/ItemDrop.gd" id="4_4nrea"]
+[ext_resource type="Script" uid="uid://jp44gbkgwwnq" path="res://Scripts/Combat/Hurtbox.gd" id="4_lkqbi"]
+[ext_resource type="Script" uid="uid://cuv5lg4um40ro" path="res://item_data.gd" id="5_b3l0j"]
+[ext_resource type="Texture2D" uid="uid://drrl6bl78ldn2" path="res://Assets/Sprites/GamePlay/Breakables/Grass.png" id="5_vadp8"]
+[ext_resource type="Resource" uid="uid://bunm7n8u44den" path="res://Items/Stamina Bulb.tres" id="6_4nrea"]
+[ext_resource type="AudioStream" uid="uid://bu0ipoj4r7o4k" path="res://Assets/music/GamePlaySFX/bush-cut-103503.mp3" id="6_vadp8"]
+[ext_resource type="PackedScene" uid="uid://cptrxq30oimcd" path="res://Scenes/Gameplay/ItemPUs/Gold_PU.tscn" id="7_ia3tf"]
+[ext_resource type="PackedScene" uid="uid://dsgsm50khqql4" path="res://Scenes/Gameplay/ItemPUs/Item_PU.tscn" id="8_2ih1e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2f1tv"]
+radius = 5.0
+height = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hgibt"]
+radius = 6.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16now"]
+atlas = ExtResource("5_vadp8")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8rtd"]
+atlas = ExtResource("5_vadp8")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkqbi"]
+atlas = ExtResource("5_vadp8")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oupjk"]
+atlas = ExtResource("5_vadp8")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nrea"]
+atlas = ExtResource("5_vadp8")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_btwqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16now")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8rtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkqbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oupjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nrea")
+}],
+"loop": false,
+"name": &"death",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16now")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[node name="TallGrass" type="Node2D" groups=["Enemies"]]
+scale = Vector2(1.5, 1.5)
+
+[node name="Resources" type="Node" parent="."]
+script = ExtResource("1_vadp8")
+max_health = 1
+health = 1
+max_stamina = 0
+stamina = 0
+stamina_regen_rate = 0
+stamina_regen_delay = 0.0
+max_mana = 0
+mana = 0
+mana_regen_amount = 0
+mana_regen_interval = 0.0
+
+[node name="Combat" type="Node" parent="."]
+script = ExtResource("2_16now")
+sprite_path = NodePath("../AnimatedSprite2D")
+death_sound = NodePath("../AudioStreamPlayer2D")
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("3_j8rtd")
+str = 0
+dex = 0
+vit = 0
+wis = 0
+skl = 0
+
+[node name="ItemDrop" type="Node" parent="."]
+script = ExtResource("4_4nrea")
+gold_drop_chance = 0.08
+gold_amount = 2
+item_drop_chance = 0.25
+possible_items = Array[ExtResource("5_b3l0j")]([ExtResource("6_4nrea")])
+gold_pickup_scene = ExtResource("7_ia3tf")
+item_pickup_scene = ExtResource("8_2ih1e")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+script = ExtResource("4_lkqbi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -4)
+rotation = 9.42476
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_2f1tv")
+debug_color = Color(0.787689, 0.41818, 0.289295, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -5.33333)
+shape = SubResource("CircleShape2D_hgibt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -15.3333)
+sprite_frames = SubResource("SpriteFrames_btwqn")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_vadp8")
+pitch_scale = 0.64

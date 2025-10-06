@@ -1,8 +1,8 @@
-[gd_scene load_steps=30 format=4 uid="uid://dx6fljbse4mxu"]
+[gd_scene load_steps=32 format=4 uid="uid://dx6fljbse4mxu"]
 
 [ext_resource type="Script" uid="uid://byk5nyi0fyoml" path="res://Scenes/GreatForest/Areas/house_3_int.gd" id="1_5jdgh"]
 [ext_resource type="PackedScene" uid="uid://cu6i6225dwxgf" path="res://Scenes/UI_Scenes/HUD_panel.tscn" id="1_gd3xt"]
-[ext_resource type="Texture2D" uid="uid://csvjiyhf624n1" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_tileset.png" id="2_oux78"]
+[ext_resource type="Texture2D" uid="uid://csvjiyhf624n1" path="res://Assets - Copy/Sprites/Green Veil/Environment/GV_interior_tileset.png" id="2_oux78"]
 [ext_resource type="PackedScene" uid="uid://ctunlgexnq1u6" path="res://Player/Scenes/Player.tscn" id="3_518m1"]
 [ext_resource type="Script" uid="uid://clsgtiwbgte1t" path="res://Scenes/GreatForest/Areas/green_veil_enter_from_house_3.gd" id="3_wqxu1"]
 [ext_resource type="PackedScene" uid="uid://m8f6od8nw757" path="res://Scenes/GreatForest/Interior_Items/gv_candle8.tscn" id="4_jytxh"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://nplhlou2tqfj" path="res://Scenes/GreatForest/Interior_Items/gv_crate.tscn" id="17_eob8v"]
 [ext_resource type="PackedScene" uid="uid://b6xcojspiukiq" path="res://Scenes/GreatForest/Interior_Items/gv_crate_bunch1.tscn" id="18_52o3e"]
 [ext_resource type="PackedScene" uid="uid://cdf0ds6gkwfgt" path="res://Scenes/GreatForest/Interior_Items/gv_table_vertical.tscn" id="19_hiwng"]
+[ext_resource type="PackedScene" uid="uid://c2ij4raqawfp8" path="res://Scenes/Gameplay/Breakables/large_jar.tscn" id="24_hiwng"]
+[ext_resource type="PackedScene" uid="uid://c2naig6367o05" path="res://Scenes/Gameplay/Breakables/small_jar.tscn" id="25_em8iq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74x3q"]
 texture = ExtResource("2_oux78")
@@ -297,6 +299,14 @@ position = Vector2(-32, -185)
 [node name="GV_candle12" parent="World_Objects" instance=ExtResource("9_mxwqp")]
 position = Vector2(138, -174)
 
+[node name="PU\'s" type="Node2D" parent="World_Objects"]
+
+[node name="LargeJar" parent="World_Objects" instance=ExtResource("24_hiwng")]
+position = Vector2(-78, -31)
+
+[node name="SmallJar" parent="World_Objects" instance=ExtResource("25_em8iq")]
+position = Vector2(-78, -62)
+
 [node name="World_Collisions" type="Node" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="World_Collisions"]
@@ -322,6 +332,7 @@ position = Vector2(143, 10)
 shape = SubResource("RectangleShape2D_r8wko")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 color = Color(1, 1, 1, 0.298039)
 energy = 4.0
 blend_mode = 1

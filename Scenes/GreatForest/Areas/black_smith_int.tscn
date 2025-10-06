@@ -1,10 +1,11 @@
-[gd_scene load_steps=31 format=4 uid="uid://dntsrknd6a8qa"]
+[gd_scene load_steps=34 format=4 uid="uid://dntsrknd6a8qa"]
 
 [ext_resource type="PackedScene" uid="uid://cu6i6225dwxgf" path="res://Scenes/UI_Scenes/HUD_panel.tscn" id="1_8tq37"]
 [ext_resource type="Script" uid="uid://clroupv3fohnj" path="res://Scenes/GreatForest/Areas/black_smith_int.gd" id="1_dbvni"]
-[ext_resource type="Texture2D" uid="uid://csvjiyhf624n1" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_tileset.png" id="2_dbvni"]
+[ext_resource type="Texture2D" uid="uid://csvjiyhf624n1" path="res://Assets - Copy/Sprites/Green Veil/Environment/GV_interior_tileset.png" id="2_dbvni"]
 [ext_resource type="PackedScene" uid="uid://ctunlgexnq1u6" path="res://Player/Scenes/Player.tscn" id="4_s4d3x"]
 [ext_resource type="PackedScene" uid="uid://dtek0owq62m5g" path="res://Scenes/GreatForest/Interior_Items/gv_counter_long.tscn" id="5_1p6qu"]
+[ext_resource type="PackedScene" uid="uid://dbqpd2oi1eoyw" path="res://NPC/duke.tscn" id="5_id4m5"]
 [ext_resource type="PackedScene" uid="uid://cs23mroeq5fpp" path="res://Scenes/GreatForest/Interior_Items/gv_sconce.tscn" id="6_7frl8"]
 [ext_resource type="PackedScene" uid="uid://c2a7i7b5rmr4r" path="res://Scenes/GreatForest/Interior_Items/gv_houseplant.tscn" id="7_rwpd4"]
 [ext_resource type="PackedScene" uid="uid://cdf0ds6gkwfgt" path="res://Scenes/GreatForest/Interior_Items/gv_table_vertical.tscn" id="8_w52m6"]
@@ -22,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://djws4nb27ytpd" path="res://Scenes/GreatForest/Interior_Items/gv_barrell.tscn" id="20_l7ixe"]
 [ext_resource type="Script" uid="uid://dlh8c2md58tkp" path="res://Scenes/GreatForest/Areas/green_veil_enter_from_black_smith.gd" id="21_8tq37"]
 [ext_resource type="PackedScene" uid="uid://c1r35yw3dp53f" path="res://Scenes/GreatForest/Interior_Items/gv_book2.tscn" id="21_ymw7f"]
+[ext_resource type="PackedScene" uid="uid://5quqgmlk87a8" path="res://Scenes/Gameplay/ItemPUs/Small_Chest.tscn" id="23_1p6qu"]
+[ext_resource type="Resource" uid="uid://dy8v0kp4ivdaf" path="res://Items/smallmanacrystal.tres" id="24_7frl8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_njgv7"]
 texture = ExtResource("2_dbvni")
@@ -195,7 +198,10 @@ blend_mode = 1
 y_sort_enabled = true
 
 [node name="Player" parent="World_Objects" instance=ExtResource("4_s4d3x")]
-position = Vector2(-60, -53)
+position = Vector2(-60, -51)
+
+[node name="Duke" parent="World_Objects" instance=ExtResource("5_id4m5")]
+position = Vector2(-60, -135)
 
 [node name="GV_counter_long" parent="World_Objects" instance=ExtResource("5_1p6qu")]
 position = Vector2(60, -153)
@@ -268,6 +274,10 @@ position = Vector2(132, -187)
 
 [node name="GV_book2" parent="World_Objects" instance=ExtResource("21_ymw7f")]
 position = Vector2(34, -162)
+
+[node name="SmallChest" parent="World_Objects" instance=ExtResource("23_1p6qu")]
+position = Vector2(-170, -170)
+item = ExtResource("24_7frl8")
 
 [node name="World_Collisions" type="Node" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=250 format=3 uid="uid://ctunlgexnq1u6"]
+[gd_scene load_steps=251 format=3 uid="uid://ctunlgexnq1u6"]
 
 [ext_resource type="Script" uid="uid://ccaugnyv74ism" path="res://Player/Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://d0jq2eb3auwwo" path="res://Player/Animations/Maria_SpriteSheets/attack/Maria_Sword_Attack_Down.png" id="2_gt0dp"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://dixddi520fm6n" path="res://Player/Animations/Maria_SpriteSheets/idle_spell/Maria_Idle_Spell_Side.png" id="13_lcau6"]
 [ext_resource type="Texture2D" uid="uid://jajxysnbn4xf" path="res://Player/Animations/Maria_SpriteSheets/idle_spell/Maria_Idle_Spell_Up.png" id="14_ki31b"]
 [ext_resource type="Script" uid="uid://dfqa0v0rnp7s0" path="res://Player/Scripts/state_attack.gd" id="14_p5bkw"]
+[ext_resource type="Script" uid="uid://j1b1eqfd8si5" path="res://Player/Scripts/state_dialogue.gd" id="14_x6ssr"]
 [ext_resource type="Texture2D" uid="uid://cgufj3w85h3qt" path="res://Player/Animations/Maria_SpriteSheets/run/Maria_Sword_Run_Up.png" id="15_qqeun"]
 [ext_resource type="Texture2D" uid="uid://cqlxuebqkgua7" path="res://Player/Animations/Maria_SpriteSheets/dash/Maria_Sword_dash_down.png" id="18_r34du"]
 [ext_resource type="Texture2D" uid="uid://baixjpqww5nsl" path="res://Player/Animations/Maria_SpriteSheets/dash/Maria_Sword_dash_side.png" id="20_0xumb"]
@@ -37,25 +38,25 @@
 [ext_resource type="Texture2D" uid="uid://bqgxmlbdu8vwy" path="res://Player/Animations/Maria_SpriteSheets/mana_dash/Maria_Sword_mana_dash_up.png" id="26_g34xy"]
 [ext_resource type="Texture2D" uid="uid://xc78wu84qlx4" path="res://Player/Animations/Maria_SpriteSheets/mana_dash/Maria_Sword_mana_dash_side.png" id="26_ndbmg"]
 [ext_resource type="Script" uid="uid://jp44gbkgwwnq" path="res://Scripts/Combat/Hurtbox.gd" id="26_y3bh1"]
-[ext_resource type="AudioStream" uid="uid://d323ggnotfagy" path="res://Assets/music/AttackSFX/slash-21834.mp3" id="27_1udwv"]
+[ext_resource type="AudioStream" uid="uid://d323ggnotfagy" path="res://Assets - Copy/music/AttackSFX/slash-21834.mp3" id="27_1udwv"]
 [ext_resource type="Script" uid="uid://bf1dmc7i06a6r" path="res://Player/Scripts/state_idle_spell.gd" id="28_5ju6i"]
-[ext_resource type="AudioStream" uid="uid://dbc3whq2j5s0h" path="res://Assets/music/Player SFX/st3-footstep-sfx-323056.mp3" id="28_lcau6"]
-[ext_resource type="AudioStream" uid="uid://n4ssyd5bf6wx" path="res://Assets/music/AttackSFX/fire-magic-1-378636.mp3" id="29_5ju6i"]
-[ext_resource type="AudioStream" uid="uid://d2av2s62qdbay" path="res://Assets/music/AttackSFX/fire-magic-3-378640.mp3" id="30_7x0k2"]
-[ext_resource type="AudioStream" uid="uid://dhg2mnkpgy7bf" path="res://Assets/music/AttackSFX/wind-magic-2-378627.mp3" id="31_j7iov"]
-[ext_resource type="AudioStream" uid="uid://d0xb1s7wdypm3" path="res://Assets/music/AttackSFX/wind-magic-1-378628.mp3" id="32_3l0o7"]
+[ext_resource type="AudioStream" uid="uid://dbc3whq2j5s0h" path="res://Assets - Copy/music/Player SFX/st3-footstep-sfx-323056.mp3" id="28_lcau6"]
+[ext_resource type="AudioStream" uid="uid://n4ssyd5bf6wx" path="res://Assets - Copy/music/AttackSFX/fire-magic-1-378636.mp3" id="29_5ju6i"]
+[ext_resource type="AudioStream" uid="uid://d2av2s62qdbay" path="res://Assets - Copy/music/AttackSFX/fire-magic-3-378640.mp3" id="30_7x0k2"]
+[ext_resource type="AudioStream" uid="uid://dhg2mnkpgy7bf" path="res://Assets - Copy/music/AttackSFX/wind-magic-2-378627.mp3" id="31_j7iov"]
+[ext_resource type="AudioStream" uid="uid://d0xb1s7wdypm3" path="res://Assets - Copy/music/AttackSFX/wind-magic-1-378628.mp3" id="32_3l0o7"]
 [ext_resource type="Script" uid="uid://byptohrtr0rfp" path="res://Player/Scripts/state_run_spell.gd" id="32_j7iov"]
-[ext_resource type="AudioStream" uid="uid://c4ibggdcppg4x" path="res://Assets/music/GamePlaySFX/blip-120938.mp3" id="33_3l0o7"]
+[ext_resource type="AudioStream" uid="uid://c4ibggdcppg4x" path="res://Assets - Copy/music/GamePlaySFX/blip-120938.mp3" id="33_3l0o7"]
 [ext_resource type="PackedScene" uid="uid://brr5frtxholrp" path="res://Player/Scenes/lantern.tscn" id="35_uhg5v"]
-[ext_resource type="AudioStream" uid="uid://bky4f0cqtst5j" path="res://Assets/music/GamePlaySFX/flip-switch-304548.mp3" id="35_vdihd"]
+[ext_resource type="AudioStream" uid="uid://bky4f0cqtst5j" path="res://Assets - Copy/music/GamePlaySFX/flip-switch-304548.mp3" id="35_vdihd"]
 [ext_resource type="Script" uid="uid://cj3mmx8tn6akt" path="res://Player/Scenes/lantern.gd" id="36_qwnvk"]
-[ext_resource type="AudioStream" uid="uid://dbt76nhpcpoco" path="res://Assets/music/UISFX/pause-89443.mp3" id="38_i8six"]
-[ext_resource type="AudioStream" uid="uid://dlvkp156wjdrl" path="res://Assets/music/UISFX/unpause-106278.mp3" id="39_r34du"]
+[ext_resource type="AudioStream" uid="uid://dbt76nhpcpoco" path="res://Assets - Copy/music/UISFX/pause-89443.mp3" id="38_i8six"]
+[ext_resource type="AudioStream" uid="uid://dlvkp156wjdrl" path="res://Assets - Copy/music/UISFX/unpause-106278.mp3" id="39_r34du"]
 [ext_resource type="Script" uid="uid://c15nrkp3b0akl" path="res://Scripts/Combat/Hitbox.gd" id="41_prypp"]
-[ext_resource type="AudioStream" uid="uid://c64owoepd6sh0" path="res://Assets/music/Player SFX/whoosh-flanging-389754.mp3" id="44_0xumb"]
-[ext_resource type="AudioStream" uid="uid://bondwl8xldqwv" path="res://Assets/music/Player SFX/clean-whoosh-382726.mp3" id="49_6r4ih"]
-[ext_resource type="AudioStream" uid="uid://boqk27h33gelh" path="res://Assets/music/GamePlaySFX/healing-magic-3-378664.mp3" id="51_la0fh"]
-[ext_resource type="Texture2D" uid="uid://dm660r5qeswl1" path="res://Assets/Sprites/GamePlay/Heal.png" id="55_la0fh"]
+[ext_resource type="AudioStream" uid="uid://c64owoepd6sh0" path="res://Assets - Copy/music/Player SFX/whoosh-flanging-389754.mp3" id="44_0xumb"]
+[ext_resource type="AudioStream" uid="uid://bondwl8xldqwv" path="res://Assets - Copy/music/Player SFX/clean-whoosh-382726.mp3" id="49_6r4ih"]
+[ext_resource type="AudioStream" uid="uid://boqk27h33gelh" path="res://Assets - Copy/music/GamePlaySFX/healing-magic-3-378664.mp3" id="51_la0fh"]
+[ext_resource type="Texture2D" uid="uid://dm660r5qeswl1" path="res://Assets - Copy/Sprites/GamePlay/Heal.png" id="55_la0fh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uhg5v"]
 animations = [{
@@ -2147,11 +2148,12 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["Player", "button_activators"]]
 script = ExtResource("1_cvnsp")
 
 [node name="Combat" type="Node" parent="."]
 script = ExtResource("4_bmar4")
+sprite_path = NodePath("../AnimatedSprite2D")
 
 [node name="Resources" type="Node" parent="."]
 script = ExtResource("3_bmar4")
@@ -2190,13 +2192,16 @@ dash_duration = 0.8
 [node name="heal" type="Node" parent="StateMachine"]
 script = ExtResource("13_g2qw2")
 
+[node name="dialogue" type="Node" parent="StateMachine"]
+script = ExtResource("14_x6ssr")
+
 [node name="Player_Shadow" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_uhg5v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -17)
 sprite_frames = SubResource("SpriteFrames_j7iov")
-animation = &"run_spell_side"
+animation = &"idle_up"
 autoplay = "run_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

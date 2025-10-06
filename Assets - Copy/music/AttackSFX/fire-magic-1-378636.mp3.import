@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://n4ssyd5bf6wx"
+path="res://.godot/imported/fire-magic-1-378636.mp3-60311277ff5889e0d7455df7dea1464b.mp3str"
+
+[deps]
+
+source_file="res://Assets - Copy/music/AttackSFX/fire-magic-1-378636.mp3"
+dest_files=["res://.godot/imported/fire-magic-1-378636.mp3-60311277ff5889e0d7455df7dea1464b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

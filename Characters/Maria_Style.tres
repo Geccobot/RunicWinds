@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=11 format=3 uid="uid://cxutxojt0yhts"]
+
+[ext_resource type="Script" uid="uid://cjb5vjkgr00aq" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_7vhye"]
+[ext_resource type="Script" uid="uid://c0hrihs0nlw8r" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_iodyx"]
+
+[sub_resource type="Resource" id="Resource_0xul0"]
+script = ExtResource("1_7vhye")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_7rju7"]
+script = ExtResource("1_7vhye")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_kwl2f"]
+script = ExtResource("1_7vhye")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_aa1jg"]
+script = ExtResource("1_7vhye")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_oal2q"]
+script = ExtResource("1_7vhye")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_up6cf"]
+script = ExtResource("1_7vhye")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_df4hi"]
+script = ExtResource("1_7vhye")
+overrides = {}
+
+[sub_resource type="Resource" id="Resource_c2ktk"]
+script = ExtResource("1_7vhye")
+overrides = {}
+
+[resource]
+script = ExtResource("2_iodyx")
+name = "Maria_Style"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16"])
+layer_info = {
+"": SubResource("Resource_0xul0"),
+"10": SubResource("Resource_7rju7"),
+"11": SubResource("Resource_kwl2f"),
+"12": SubResource("Resource_aa1jg"),
+"13": SubResource("Resource_oal2q"),
+"14": SubResource("Resource_up6cf"),
+"15": SubResource("Resource_df4hi"),
+"16": SubResource("Resource_c2ktk")
+}
+base_overrides = {}
+layers = Array[ExtResource("1_7vhye")]([])
+metadata/_latest_layer = ""

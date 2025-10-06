@@ -4,6 +4,7 @@ var tween: Tween
 var cardinal_direction = Vector2.UP
 static var direction : Vector2 = Vector2.ZERO
 var interactable: Node = null
+var dialogue_timeline: String = ""
 
 @onready var hitbox_helper: AnimationPlayer = $HitboxHelper
 @onready var flash: AnimationPlayer = $Flash
@@ -26,6 +27,9 @@ var interactable: Node = null
 @onready var pause_sfx: AudioStreamPlayer2D = $SFX/PauseSFX
 @onready var unpause_sfx: AudioStreamPlayer2D = $SFX/UnpauseSFX
 @onready var heal_light: PointLight2D = $StateMachine/heal/Heal_Light
+@onready var dialogue: State_Dialogue = $StateMachine/dialogue
+@onready var idle: State_Idle = $StateMachine/idle
+
 
 
 signal player_ready
@@ -70,9 +74,10 @@ func _ready():
 	GestureManager.connect("gesture_performed", Callable(self, "_on_gesture_performed"))
 
 	emit_signal("player_ready")
-
+	
 
 @warning_ignore("unused_parameter")
+
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
@@ -105,6 +110,13 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Interact"):
 		if interactable and interactable.has_method("interact"):
 			interactable.interact()
+
+# Inside your Player script, in _physics_process or HandleInput
+	if Input.is_action_just_pressed("Interact") and interactable and interactable is PushableBlock:
+		var dir = direction.normalized().round()
+		print("player pressed interact on the block")
+		(interactable as PushableBlock).try_push(dir)
+
 
 func _unhandled_input(event):
 	if event is InputEventMouseButton:
@@ -235,3 +247,6 @@ func _on_gesture_performed(pattern: Array) -> void:
 
 func set_interactable(obj: Node):
 	interactable = obj
+
+func ChangeState(new_state: State) -> void:
+	state_machine.ChangeState(new_state)

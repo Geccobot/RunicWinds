@@ -1,7 +1,7 @@
 [gd_scene load_steps=69 format=4 uid="uid://cpritk7ynbydt"]
 
 [ext_resource type="Script" uid="uid://dkx5kmff1ykvi" path="res://Scripts/deep_wood.gd" id="1_gdmsj"]
-[ext_resource type="Texture2D" uid="uid://h8y7ki1y8wds" path="res://Assets/Sprites/Green Veil/Environment/GV_tileset.png" id="2_l5ng5"]
+[ext_resource type="Texture2D" uid="uid://h8y7ki1y8wds" path="res://Assets - Copy/Sprites/Green Veil/Environment/GV_tileset.png" id="2_l5ng5"]
 [ext_resource type="PackedScene" uid="uid://ctunlgexnq1u6" path="res://Player/Scenes/Player.tscn" id="3_g710j"]
 [ext_resource type="PackedScene" uid="uid://ccfxsc8gf5exc" path="res://Scenes/GreatForest/Flora/Trees/GVTree2.tscn" id="4_wwaqp"]
 [ext_resource type="PackedScene" uid="uid://djc0tix4ddx1q" path="res://Scenes/GreatForest/Flora/Trees/GVTree3.tscn" id="5_ckf1j"]

@@ -1,0 +1,103 @@
+[gd_scene load_steps=14 format=3 uid="uid://d0e5bo0qhwyqi"]
+
+[ext_resource type="Script" uid="uid://chyx5f0qtvh55" path="res://NPC/guard_1.gd" id="1_l43p3"]
+[ext_resource type="Texture2D" uid="uid://cgfsjnl6rxiwb" path="res://Player/Animations/Maria_SpriteSheets/Maria_shadow.png" id="2_esl6s"]
+[ext_resource type="Texture2D" uid="uid://dpfi5v4ywmfgg" path="res://Assets/Sprites/NPC/Guard_1/Guard_1_idle_down.png" id="3_esl6s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a7hy1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_esl6s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu4ql"]
+atlas = ExtResource("3_esl6s")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0q1u"]
+atlas = ExtResource("3_esl6s")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdstn"]
+atlas = ExtResource("3_esl6s")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ng7yv"]
+atlas = ExtResource("3_esl6s")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34rit"]
+atlas = ExtResource("3_esl6s")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2snp"]
+atlas = ExtResource("3_esl6s")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_icfrp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu4ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0q1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdstn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ng7yv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34rit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2snp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5whpl"]
+radius = 6.0
+height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_irkke"]
+radius = 15.1327
+
+[node name="Guard1" type="CharacterBody2D" groups=["NPC"]]
+script = ExtResource("1_l43p3")
+timeline_name = "BridgeGuard"
+
+[node name="Player_Shadow" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.01328e-06, 1)
+scale = Vector2(1.4, 1.5)
+sprite_frames = SubResource("SpriteFrames_a7hy1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -18)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_icfrp")
+autoplay = "default"
+frame_progress = 0.475689
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_5whpl")
+
+[node name="DialogArea" type="Area2D" parent="."]
+
+[node name="DialogAreaColl" type="CollisionShape2D" parent="DialogArea"]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_irkke")
+debug_color = Color(0, 0.7, 0.0782685, 0.42)
+
+[connection signal="body_entered" from="DialogArea" to="." method="_on_dialog_area_body_entered"]
+[connection signal="body_exited" from="DialogArea" to="." method="_on_dialog_area_body_exited"]

@@ -1,16 +1,16 @@
 [gd_scene load_steps=47 format=3 uid="uid://cfdw11d5lmi0l"]
 
 [ext_resource type="Script" uid="uid://bontr8mfh01oh" path="res://Scripts/Combat/fire_ball.gd" id="1_s4xl4"]
-[ext_resource type="Texture2D" uid="uid://cqbjeum6kgct0" path="res://Assets/Sprites/GamePlay/Magic Attacks/Fireball.png.png" id="2_33mu5"]
+[ext_resource type="Texture2D" uid="uid://cqbjeum6kgct0" path="res://Assets - Copy/Sprites/GamePlay/Magic Attacks/Fireball.png.png" id="2_33mu5"]
 [ext_resource type="Script" uid="uid://c15nrkp3b0akl" path="res://Scripts/Combat/Hitbox.gd" id="3_ux4um"]
-[ext_resource type="AudioStream" uid="uid://n4ssyd5bf6wx" path="res://Assets/music/AttackSFX/fire-magic-1-378636.mp3" id="4_33mu5"]
-[ext_resource type="AudioStream" uid="uid://ckme141lv8d3w" path="res://Assets/music/AttackSFX/fire-magic-4-378637.mp3" id="5_ux4um"]
+[ext_resource type="AudioStream" uid="uid://n4ssyd5bf6wx" path="res://Assets - Copy/music/AttackSFX/fire-magic-1-378636.mp3" id="4_33mu5"]
+[ext_resource type="AudioStream" uid="uid://ckme141lv8d3w" path="res://Assets - Copy/music/AttackSFX/fire-magic-4-378637.mp3" id="5_ux4um"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7hf78"]
 radius = 9.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s4xl4"]
-radius = 6.0
+radius = 9.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ueew8"]
 atlas = ExtResource("2_33mu5")

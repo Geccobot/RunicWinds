@@ -11,7 +11,9 @@ var scene_music = {
 	"res://Scenes/GreatForest/Areas/deep_wood.tscn": "res://Assets/music/DeepWood.wav",
 	"res://Scenes/GreatForest/Areas/great_forest.tscn": "res://Assets/music/Green Veil.wav",
 	"res://Scenes/GreatForest/Areas/house_1_int.tscn": "res://Assets/music/Green Veil.wav",
-	"res://Scenes/GreatForest/Areas/black_smith_int.tscn": "res://Assets/music/Green Veil.wav"
+	"res://Scenes/GreatForest/Areas/black_smith_int.tscn": "res://Assets/music/Green Veil.wav",
+	"res://Scenes/GreatForest/Areas/isolated_tower_5f.tscn": "res://Assets - Copy/music/fireplace-fire-crackling-loop-123930.mp3",
+"res://Scenes/GreatForest/Areas/isolated_tower_4f.tscn": "res://Assets - Copy/music/fireplace-fire-crackling-loop-123930.mp3"
 }
 
 func _process(delta):

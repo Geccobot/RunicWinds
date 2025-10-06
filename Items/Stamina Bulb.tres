@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bunm7n8u44den"]
+
+[ext_resource type="Texture2D" uid="uid://t61my0q2ovex" path="res://Assets - Copy/Sprites/Items/Consumables/Small_Stamina_Root.png" id="1_0y2me"]
+[ext_resource type="Script" uid="uid://cuv5lg4um40ro" path="res://item_data.gd" id="1_2asid"]
+
+[resource]
+script = ExtResource("1_2asid")
+id = &"staminabulb"
+display_name = "Stamina Bulb"
+icon = ExtResource("1_0y2me")
+description = "A bulb native to Forethill. Recovers a small amount of stamina. 
+
+Widely used for it's medic"
+max_stack = 99
+type = &"keyitem"
+metadata/_custom_type_script = "uid://cuv5lg4um40ro"

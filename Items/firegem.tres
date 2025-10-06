@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c1d4m280kbgh5"]
 
-[ext_resource type="Texture2D" uid="uid://ddoxajugo6bof" path="res://Assets/Sprites/Items/Key_Items/firegem.png" id="1_8mjys"]
+[ext_resource type="Texture2D" uid="uid://ddoxajugo6bof" path="res://Assets - Copy/Sprites/Items/Key_Items/firegem.png" id="1_8mjys"]
 [ext_resource type="Script" uid="uid://cuv5lg4um40ro" path="res://item_data.gd" id="1_doqsu"]
 
 [resource]
@@ -10,7 +10,7 @@ display_name = "Fire Gem"
 icon = ExtResource("1_8mjys")
 description = "A gem with the \"Fire\" rune embossed on it. Used to upgrade the effects of Fire base incantations. 
 
-Though more powerfull than most, the \"FIre\" Rune is tempermental in it's mana release, causing it to be difficult to master. "
+Though more powerful than most, the \"FIre\" Rune is tempermental in it's mana release, causing it to be difficult to master. "
 max_stack = 99
 type = &"keyitem"
 metadata/_custom_type_script = "uid://cuv5lg4um40ro"

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cusaf2u7wr77t"]
+
+[ext_resource type="Script" uid="uid://rn8cqn1qwomf" path="res://Scripts/enemy_lock.gd" id="1_73rw2"]
+[ext_resource type="AudioStream" uid="uid://b6h4i0g4e7nm2" path="res://Assets - Copy/music/GamePlaySFX/Puzzle/happy-message-ping-351298.mp3" id="2_scuem"]
+
+[node name="EnemyLock" type="Node"]
+script = ExtResource("1_73rw2")
+
+[node name="SuccessSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_scuem")
+pitch_scale = 0.53

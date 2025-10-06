@@ -1,3 +1,53 @@
-[gd_scene format=3 uid="uid://dkddfsrckspqk"]
+[gd_scene load_steps=7 format=3 uid="uid://dkddfsrckspqk"]
+
+[ext_resource type="Texture2D" uid="uid://dcsvvqpunuurw" path="res://Assets/Sprites/UI/Dialog/Dialog_Backdrop.png" id="1_y01hg"]
+[ext_resource type="Texture2D" uid="uid://cg6sp7mqsqahc" path="res://Assets/Sprites/UI/misc_menu/Square_container_small_flat.png" id="2_3tkgq"]
+[ext_resource type="Texture2D" uid="uid://dwuvtwbytg65e" path="res://Assets/Sprites/Portraits/Maria_portrait.png" id="3_ca5mr"]
+[ext_resource type="Texture2D" uid="uid://v5y8ybu02iqp" path="res://Assets/Sprites/Portraits/DukePortrait.png" id="4_ca5mr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qrpuw"]
+texture = ExtResource("1_y01hg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i3n20"]
+texture = ExtResource("2_3tkgq")
 
 [node name="DialogManager" type="Node"]
+
+[node name="DialogPanel" type="Panel" parent="."]
+offset_left = 136.0
+offset_top = 352.0
+offset_right = 1006.0
+offset_bottom = 624.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qrpuw")
+
+[node name="PortaitPanel" type="Panel" parent="DialogPanel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 224.0
+offset_bottom = 236.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i3n20")
+
+[node name="TextureRect" type="TextureRect" parent="DialogPanel/PortaitPanel"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 160.0
+offset_bottom = 203.0
+texture = ExtResource("3_ca5mr")
+
+[node name="PortaitPanel2" type="Panel" parent="DialogPanel"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 24.0
+offset_right = 840.0
+offset_bottom = 236.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i3n20")
+
+[node name="TextureRect" type="TextureRect" parent="DialogPanel/PortaitPanel2"]
+modulate = Color(0.762404, 0.762404, 0.762404, 1)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 24.0
+offset_right = 184.0
+offset_bottom = 209.0
+texture = ExtResource("4_ca5mr")

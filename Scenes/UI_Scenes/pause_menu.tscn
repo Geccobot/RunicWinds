@@ -1,52 +1,52 @@
 [gd_scene load_steps=68 format=3 uid="uid://vmdbkaplheie"]
 
 [ext_resource type="Script" uid="uid://d1j23luc0u5lo" path="res://Scenes/UI_Scenes/pause_menu.gd" id="1_essrr"]
-[ext_resource type="Texture2D" uid="uid://d3wab06uwsudg" path="res://Assets/Sprites/UI/misc_menu/Pause_backdrop.png" id="1_u3t1m"]
+[ext_resource type="Texture2D" uid="uid://d3wab06uwsudg" path="res://Assets - Copy/Sprites/UI/misc_menu/Pause_backdrop.png" id="1_u3t1m"]
 [ext_resource type="Texture2D" uid="uid://bflpm8ar0ss0j" path="res://Assets/Sprites/UI/Paused_Menu/Paused_Label.png" id="2_v21s0"]
-[ext_resource type="Texture2D" uid="uid://dttjoavje6na3" path="res://Assets/Sprites/UI/Load menu/back_button.png" id="3_x5bx2"]
-[ext_resource type="Texture2D" uid="uid://cvfuc7rvwn8cc" path="res://Assets/Sprites/UI/Load menu/back_button_selected.png" id="4_vyq8u"]
-[ext_resource type="Texture2D" uid="uid://wrefjw2jswpn" path="res://Assets/Sprites/UI/Load menu/back_button_hover.png" id="5_r3wnr"]
-[ext_resource type="Texture2D" uid="uid://dwenab823t2df" path="res://Assets/Sprites/UI/Paused_Menu/Equipment.png" id="6_jpyed"]
-[ext_resource type="Texture2D" uid="uid://bq7515wqe0t7t" path="res://Assets/Sprites/UI/Paused_Menu/Equipment-selected.png" id="7_p76lp"]
-[ext_resource type="Texture2D" uid="uid://blh3gygli7qfa" path="res://Assets/Sprites/UI/Paused_Menu/Equipment-Hover.png" id="8_2a1vs"]
+[ext_resource type="Texture2D" uid="uid://dttjoavje6na3" path="res://Assets - Copy/Sprites/UI/Load menu/back_button.png" id="3_x5bx2"]
+[ext_resource type="Texture2D" uid="uid://cvfuc7rvwn8cc" path="res://Assets - Copy/Sprites/UI/Load menu/back_button_selected.png" id="4_vyq8u"]
+[ext_resource type="Texture2D" uid="uid://wrefjw2jswpn" path="res://Assets - Copy/Sprites/UI/Load menu/back_button_hover.png" id="5_r3wnr"]
+[ext_resource type="Texture2D" uid="uid://dwenab823t2df" path="res://Assets - Copy/Sprites/UI/Paused_Menu/Equipment.png" id="6_jpyed"]
+[ext_resource type="Texture2D" uid="uid://bq7515wqe0t7t" path="res://Assets - Copy/Sprites/UI/Paused_Menu/Equipment-selected.png" id="7_p76lp"]
+[ext_resource type="Texture2D" uid="uid://blh3gygli7qfa" path="res://Assets - Copy/Sprites/UI/Paused_Menu/Equipment-Hover.png" id="8_2a1vs"]
 [ext_resource type="Texture2D" uid="uid://4ax44pkhr4th" path="res://Assets/Sprites/UI/Paused_Menu/Inventory.png" id="9_tlpbd"]
 [ext_resource type="Texture2D" uid="uid://8flyveek65jg" path="res://Assets/Sprites/UI/Paused_Menu/Status.png" id="9_vyq8u"]
-[ext_resource type="Texture2D" uid="uid://b3t2jdlqactgs" path="res://Assets/Sprites/UI/Paused_Menu/Inventory-Selected.png" id="10_35jee"]
+[ext_resource type="Texture2D" uid="uid://b3t2jdlqactgs" path="res://Assets - Copy/Sprites/UI/Paused_Menu/Inventory-Selected.png" id="10_35jee"]
 [ext_resource type="Texture2D" uid="uid://ddwxuavglpqfi" path="res://Assets/Sprites/UI/Paused_Menu/Status-Selected.png" id="10_r3wnr"]
-[ext_resource type="Texture2D" uid="uid://dboo2ceanf8yh" path="res://Assets/Sprites/UI/Paused_Menu/Inventory-Hover.png" id="11_fapb8"]
+[ext_resource type="Texture2D" uid="uid://dboo2ceanf8yh" path="res://Assets - Copy/Sprites/UI/Paused_Menu/Inventory-Hover.png" id="11_fapb8"]
 [ext_resource type="Texture2D" uid="uid://dnfs2yvjow1k3" path="res://Assets/Sprites/UI/Paused_Menu/Status-Hover.png" id="11_jpyed"]
 [ext_resource type="Texture2D" uid="uid://mcko7gunbw6o" path="res://Assets/Sprites/UI/Paused_Menu/Quest_Log.png" id="12_p76lp"]
 [ext_resource type="Texture2D" uid="uid://cb3x6rso4jgaq" path="res://Assets/Sprites/UI/Paused_Menu/Quest_Log-Selected.png" id="13_2a1vs"]
-[ext_resource type="Texture2D" uid="uid://co7ntdhhrq3us" path="res://Assets/Sprites/UI/misc_menu/button_normal.png" id="13_ct3r6"]
-[ext_resource type="Texture2D" uid="uid://wveuuwvfo1ob" path="res://Assets/Sprites/UI/misc_menu/button_selected.png" id="14_50ll0"]
+[ext_resource type="Texture2D" uid="uid://co7ntdhhrq3us" path="res://Assets - Copy/Sprites/UI/misc_menu/button_normal.png" id="13_ct3r6"]
+[ext_resource type="Texture2D" uid="uid://wveuuwvfo1ob" path="res://Assets - Copy/Sprites/UI/misc_menu/button_selected.png" id="14_50ll0"]
 [ext_resource type="Texture2D" uid="uid://ck43cfcnh6tty" path="res://Assets/Sprites/UI/Paused_Menu/Quest_Log-Hover.png" id="14_jse0a"]
-[ext_resource type="Texture2D" uid="uid://d361wxx0ah44i" path="res://Assets/Sprites/UI/misc_menu/button_hover.png" id="15_77qfc"]
-[ext_resource type="Texture2D" uid="uid://c2x8wn0dbyxfe" path="res://Assets/Sprites/UI/misc_menu/Square_container.png" id="17_r53w3"]
-[ext_resource type="Texture2D" uid="uid://x8li64fi8e3c" path="res://Assets/Sprites/UI/misc_menu/RunePanel.png" id="18_gjo3n"]
+[ext_resource type="Texture2D" uid="uid://d361wxx0ah44i" path="res://Assets - Copy/Sprites/UI/misc_menu/button_hover.png" id="15_77qfc"]
+[ext_resource type="Texture2D" uid="uid://c2x8wn0dbyxfe" path="res://Assets - Copy/Sprites/UI/misc_menu/Square_container.png" id="17_r53w3"]
+[ext_resource type="Texture2D" uid="uid://x8li64fi8e3c" path="res://Assets - Copy/Sprites/UI/misc_menu/RunePanel.png" id="18_gjo3n"]
 [ext_resource type="Texture2D" uid="uid://cbtmhui5xhoh1" path="res://Assets/Sprites/UI/Paused_Menu/Map.png" id="18_ixdti"]
-[ext_resource type="FontFile" uid="uid://d3141f31fy1qx" path="res://Assets/Fonts/windows_command_prompt.ttf" id="19_67oe2"]
+[ext_resource type="FontFile" uid="uid://d3141f31fy1qx" path="res://Assets - Copy/Fonts/windows_command_prompt.ttf" id="19_67oe2"]
 [ext_resource type="Texture2D" uid="uid://ck12ilgkp63vy" path="res://Assets/Sprites/UI/Paused_Menu/Map-Selected.png" id="19_kjdl3"]
 [ext_resource type="Texture2D" uid="uid://bbek0ef8fb7n3" path="res://Assets/Sprites/UI/Paused_Menu/Map-Hover.png" id="20_xepaj"]
 [ext_resource type="Texture2D" uid="uid://dkovxnh66vmdr" path="res://Assets/Sprites/UI/Paused_Menu/Quit_Game.png" id="21_6kfb2"]
 [ext_resource type="Texture2D" uid="uid://d3tfa8rp2uir8" path="res://Assets/Sprites/UI/Paused_Menu/Quit_Game-Selected.png" id="22_essrr"]
 [ext_resource type="Texture2D" uid="uid://cjo3dyn2s7a3y" path="res://Assets/Sprites/UI/Paused_Menu/Quit_Game-Hover.png" id="23_3dl8w"]
-[ext_resource type="AudioStream" uid="uid://0yas1r1x84cf" path="res://Assets/music/UISFX/digital-click-357350.mp3" id="25_200py"]
-[ext_resource type="Texture2D" uid="uid://dvw5tyb2knu48" path="res://Assets/Sprites/UI/map/ForethiilMap.png" id="25_gu2xi"]
-[ext_resource type="Texture2D" uid="uid://byt1eqky1jc7i" path="res://Assets/Sprites/UI/Load menu/Confirm_container.png" id="25_vtf2a"]
-[ext_resource type="AudioStream" uid="uid://c86q178tdsebx" path="res://Assets/music/UISFX/menu-selection-102220.mp3" id="26_gu2xi"]
-[ext_resource type="FontFile" uid="uid://d2hodyyurcqr5" path="res://Assets/Fonts/GallaeciaForte.ttf" id="26_is817"]
-[ext_resource type="Texture2D" uid="uid://wmnwlu7a1qqi" path="res://Assets/Sprites/UI/Load menu/YesButton.png" id="27_587kp"]
-[ext_resource type="Texture2D" uid="uid://bwcup646ajwf8" path="res://Assets/Sprites/UI/Load menu/YesButton-Selected.png" id="28_2ey0l"]
-[ext_resource type="Texture2D" uid="uid://cj5fx0ac7gp1t" path="res://Assets/Sprites/UI/Load menu/YesButton-Hover.png" id="29_mymqm"]
-[ext_resource type="Texture2D" uid="uid://btmt4fi8dq6j0" path="res://Assets/Sprites/UI/Load menu/NoButton.png" id="30_0ypuf"]
-[ext_resource type="Texture2D" uid="uid://dd4jivqkfyurp" path="res://Assets/Sprites/UI/Load menu/NoButton-selected.png" id="31_ru8xf"]
-[ext_resource type="Texture2D" uid="uid://2r1addt47kie" path="res://Assets/Sprites/UI/Load menu/NoButton-hover.png" id="32_gby00"]
-[ext_resource type="Texture2D" uid="uid://bjetf0jp5fg8y" path="res://Assets/Sprites/UI/map/Forethill_Panel.png" id="34_mymqm"]
-[ext_resource type="Texture2D" uid="uid://cepqgqh4agjy7" path="res://Assets/Sprites/UI/map/ForethiilMap_Compass_Panel.png" id="35_0ypuf"]
-[ext_resource type="AudioStream" uid="uid://dbt76nhpcpoco" path="res://Assets/music/UISFX/pause-89443.mp3" id="36_587kp"]
-[ext_resource type="AudioStream" uid="uid://dlvkp156wjdrl" path="res://Assets/music/UISFX/unpause-106278.mp3" id="37_2ey0l"]
+[ext_resource type="AudioStream" uid="uid://0yas1r1x84cf" path="res://Assets - Copy/music/UISFX/digital-click-357350.mp3" id="25_200py"]
+[ext_resource type="Texture2D" uid="uid://dvw5tyb2knu48" path="res://Assets - Copy/Sprites/UI/map/ForethiilMap.png" id="25_gu2xi"]
+[ext_resource type="Texture2D" uid="uid://byt1eqky1jc7i" path="res://Assets - Copy/Sprites/UI/Load menu/Confirm_container.png" id="25_vtf2a"]
+[ext_resource type="AudioStream" uid="uid://c86q178tdsebx" path="res://Assets - Copy/music/UISFX/menu-selection-102220.mp3" id="26_gu2xi"]
+[ext_resource type="FontFile" uid="uid://d2hodyyurcqr5" path="res://Assets - Copy/Fonts/GallaeciaForte.ttf" id="26_is817"]
+[ext_resource type="Texture2D" uid="uid://wmnwlu7a1qqi" path="res://Assets - Copy/Sprites/UI/Load menu/YesButton.png" id="27_587kp"]
+[ext_resource type="Texture2D" uid="uid://bwcup646ajwf8" path="res://Assets - Copy/Sprites/UI/Load menu/YesButton-Selected.png" id="28_2ey0l"]
+[ext_resource type="Texture2D" uid="uid://cj5fx0ac7gp1t" path="res://Assets - Copy/Sprites/UI/Load menu/YesButton-Hover.png" id="29_mymqm"]
+[ext_resource type="Texture2D" uid="uid://btmt4fi8dq6j0" path="res://Assets - Copy/Sprites/UI/Load menu/NoButton.png" id="30_0ypuf"]
+[ext_resource type="Texture2D" uid="uid://dd4jivqkfyurp" path="res://Assets - Copy/Sprites/UI/Load menu/NoButton-selected.png" id="31_ru8xf"]
+[ext_resource type="Texture2D" uid="uid://2r1addt47kie" path="res://Assets - Copy/Sprites/UI/Load menu/NoButton-hover.png" id="32_gby00"]
+[ext_resource type="Texture2D" uid="uid://bjetf0jp5fg8y" path="res://Assets - Copy/Sprites/UI/map/Forethill_Panel.png" id="34_mymqm"]
+[ext_resource type="Texture2D" uid="uid://cepqgqh4agjy7" path="res://Assets - Copy/Sprites/UI/map/ForethiilMap_Compass_Panel.png" id="35_0ypuf"]
+[ext_resource type="AudioStream" uid="uid://dbt76nhpcpoco" path="res://Assets - Copy/music/UISFX/pause-89443.mp3" id="36_587kp"]
+[ext_resource type="AudioStream" uid="uid://dlvkp156wjdrl" path="res://Assets - Copy/music/UISFX/unpause-106278.mp3" id="37_2ey0l"]
 [ext_resource type="Script" uid="uid://408d15f8xhq0" path="res://Scenes/UI_Scenes/inventory_list.gd" id="38_50ll0"]
-[ext_resource type="Texture2D" uid="uid://ckj870djvyaog" path="res://Assets/Sprites/UI/Inventory_Menu/Gold.png" id="40_77qfc"]
+[ext_resource type="Texture2D" uid="uid://ckj870djvyaog" path="res://Assets - Copy/Sprites/UI/Inventory_Menu/Gold.png" id="40_77qfc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jse0a"]
 texture = ExtResource("1_u3t1m")
@@ -569,7 +569,6 @@ offset_bottom = -14.0
 scale = Vector2(2, 2)
 theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
 theme_override_fonts/font = ExtResource("19_67oe2")
-text = "Item name"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -594,8 +593,6 @@ custom_minimum_size = Vector2(184, 150)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.352941, 0.211765, 0.0784314, 1)
 theme_override_fonts/font = ExtResource("19_67oe2")
-text = "Item Description
-Lorem ipsum yadda yadda"
 vertical_alignment = 1
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true

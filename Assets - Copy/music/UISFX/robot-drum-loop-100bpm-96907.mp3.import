@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drkpqsql7e351"
+path="res://.godot/imported/robot-drum-loop-100bpm-96907.mp3-3846e0d65b3430b155ff6053b9aa7dd8.mp3str"
+
+[deps]
+
+source_file="res://Assets - Copy/music/UISFX/robot-drum-loop-100bpm-96907.mp3"
+dest_files=["res://.godot/imported/robot-drum-loop-100bpm-96907.mp3-3846e0d65b3430b155ff6053b9aa7dd8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5at54kew4u4o"
+path="res://.godot/imported/stoneblockdragwoodgrind-82327.mp3-c2cb06bab356387af67d11348943ff61.mp3str"
+
+[deps]
+
+source_file="res://Assets - Copy/music/GamePlaySFX/Puzzle/stoneblockdragwoodgrind-82327.mp3"
+dest_files=["res://.godot/imported/stoneblockdragwoodgrind-82327.mp3-c2cb06bab356387af67d11348943ff61.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

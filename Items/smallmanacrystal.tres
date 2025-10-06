@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dy8v0kp4ivdaf"]
+
+[ext_resource type="Texture2D" uid="uid://ws1cbo20jyrq" path="res://Assets - Copy/Sprites/Items/Consumables/Small_Mana_Crystal.png" id="1_l73qp"]
+[ext_resource type="Script" uid="uid://cuv5lg4um40ro" path="res://item_data.gd" id="1_m2h14"]
+
+[resource]
+script = ExtResource("1_m2h14")
+id = &"smallmanacrystal"
+display_name = "Small Mana Crystal"
+icon = ExtResource("1_l73qp")
+description = "A crystal formed from a collection of mana in the area. Can be used to restore a small amount of Mana. 
+
+Every being forged by the enneagram possesses Runic Mana. It is only through Resonance that it can be harnessed. "
+max_stack = 99
+type = &"keyitem"
+metadata/_custom_type_script = "uid://cuv5lg4um40ro"

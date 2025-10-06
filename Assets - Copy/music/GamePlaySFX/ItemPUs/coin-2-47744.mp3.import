@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dpfgtua6vbnc0"
+path="res://.godot/imported/coin-2-47744.mp3-68792649889077a0d24ad8b3b8e7c658.mp3str"
+
+[deps]
+
+source_file="res://Assets - Copy/music/GamePlaySFX/ItemPUs/coin-2-47744.mp3"
+dest_files=["res://.godot/imported/coin-2-47744.mp3-68792649889077a0d24ad8b3b8e7c658.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,19 +1,75 @@
-[gd_scene load_steps=15 format=3 uid="uid://kxgh887vo0f1"]
+[gd_scene load_steps=28 format=3 uid="uid://kxgh887vo0f1"]
 
 [ext_resource type="Script" uid="uid://c4k6rpf3ajtfc" path="res://Player/Scripts/title_screen.gd" id="1_6x3gy"]
-[ext_resource type="Texture2D" uid="uid://c4tynw31tqig0" path="res://Assets/Sprites/UI/Main_Menu/Title_Screen.png" id="1_q3323"]
-[ext_resource type="Texture2D" uid="uid://c1eq3jpqycww1" path="res://Assets/Sprites/UI/Main_Menu/newgame.png" id="2_1ok14"]
-[ext_resource type="AudioStream" uid="uid://0yas1r1x84cf" path="res://Assets/music/UISFX/digital-click-357350.mp3" id="2_81al6"]
-[ext_resource type="AudioStream" uid="uid://c86q178tdsebx" path="res://Assets/music/UISFX/menu-selection-102220.mp3" id="3_81al6"]
-[ext_resource type="Texture2D" uid="uid://rjf4i6eubg3o" path="res://Assets/Sprites/UI/Main_Menu/Title Card.png" id="5_4lgm7"]
-[ext_resource type="Texture2D" uid="uid://dvftn4pl4d863" path="res://Assets/Sprites/UI/Main_Menu/newgame-selected.png" id="6_6x3gy"]
-[ext_resource type="Texture2D" uid="uid://cc8d8r1lyk7b1" path="res://Assets/Sprites/UI/Main_Menu/newgame-hover.png" id="7_o3lng"]
-[ext_resource type="Texture2D" uid="uid://dub6me8cu37ex" path="res://Assets/Sprites/UI/Main_Menu/continue.png" id="8_dt86o"]
-[ext_resource type="Texture2D" uid="uid://b1ig7nn14nt27" path="res://Assets/Sprites/UI/Main_Menu/continue-selected.png" id="9_icksv"]
-[ext_resource type="Texture2D" uid="uid://crf0u1qeyv0m1" path="res://Assets/Sprites/UI/Main_Menu/continue-hover.png" id="10_8ufla"]
-[ext_resource type="Texture2D" uid="uid://dju3yr7l7k67o" path="res://Assets/Sprites/UI/Main_Menu/exit.png" id="11_h8l22"]
-[ext_resource type="Texture2D" uid="uid://ch4b4mnv8y2oj" path="res://Assets/Sprites/UI/Main_Menu/exit-selected.png" id="12_d0a34"]
-[ext_resource type="Texture2D" uid="uid://dgq7kamm5mc17" path="res://Assets/Sprites/UI/Main_Menu/exit-hover.png" id="13_dn1xl"]
+[ext_resource type="Texture2D" uid="uid://c1eq3jpqycww1" path="res://Assets - Copy/Sprites/UI/Main_Menu/newgame.png" id="2_1ok14"]
+[ext_resource type="AudioStream" uid="uid://0yas1r1x84cf" path="res://Assets - Copy/music/UISFX/digital-click-357350.mp3" id="2_81al6"]
+[ext_resource type="AudioStream" uid="uid://c86q178tdsebx" path="res://Assets - Copy/music/UISFX/menu-selection-102220.mp3" id="3_81al6"]
+[ext_resource type="Texture2D" uid="uid://dhmda2hcoq2fe" path="res://Assets - Copy/Sprites/UI/Main_Menu/titlescreen.png" id="4_81al6"]
+[ext_resource type="Texture2D" uid="uid://dllek3bv1d83v" path="res://Assets - Copy/Sprites/UI/Main_Menu/titlebackground.png" id="4_ln0ng"]
+[ext_resource type="Texture2D" uid="uid://rjf4i6eubg3o" path="res://Assets - Copy/Sprites/UI/Main_Menu/Title Card.png" id="5_4lgm7"]
+[ext_resource type="PackedScene" uid="uid://d4ft81hniryrx" path="res://Scenes/UI_Scenes/Main_menu/cloud_1.tscn" id="5_5gtg5"]
+[ext_resource type="Texture2D" uid="uid://dvftn4pl4d863" path="res://Assets - Copy/Sprites/UI/Main_Menu/newgame-selected.png" id="6_6x3gy"]
+[ext_resource type="PackedScene" uid="uid://bfn8tbmul1kr7" path="res://Scenes/UI_Scenes/Main_menu/cloud_2.tscn" id="6_vrt44"]
+[ext_resource type="PackedScene" uid="uid://d1dfe13wqbkhu" path="res://Scenes/UI_Scenes/Main_menu/cloud_3.tscn" id="7_3exk3"]
+[ext_resource type="Texture2D" uid="uid://cc8d8r1lyk7b1" path="res://Assets - Copy/Sprites/UI/Main_Menu/newgame-hover.png" id="7_o3lng"]
+[ext_resource type="PackedScene" uid="uid://btwgp1qhdnsms" path="res://Scenes/UI_Scenes/Main_menu/cloud_4.tscn" id="8_3exk3"]
+[ext_resource type="Texture2D" uid="uid://dub6me8cu37ex" path="res://Assets - Copy/Sprites/UI/Main_Menu/continue.png" id="8_dt86o"]
+[ext_resource type="Texture2D" uid="uid://b1ig7nn14nt27" path="res://Assets - Copy/Sprites/UI/Main_Menu/continue-selected.png" id="9_icksv"]
+[ext_resource type="Texture2D" uid="uid://crf0u1qeyv0m1" path="res://Assets - Copy/Sprites/UI/Main_Menu/continue-hover.png" id="10_8ufla"]
+[ext_resource type="Texture2D" uid="uid://o4pkmh6q07fy" path="res://Assets - Copy/Sprites/UI/Main_Menu/Sword.png" id="10_ghd1f"]
+[ext_resource type="Texture2D" uid="uid://dju3yr7l7k67o" path="res://Assets - Copy/Sprites/UI/Main_Menu/exit.png" id="11_h8l22"]
+[ext_resource type="Texture2D" uid="uid://ch4b4mnv8y2oj" path="res://Assets - Copy/Sprites/UI/Main_Menu/exit-selected.png" id="12_d0a34"]
+[ext_resource type="Texture2D" uid="uid://dgq7kamm5mc17" path="res://Assets - Copy/Sprites/UI/Main_Menu/exit-hover.png" id="13_dn1xl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csnyj"]
+atlas = ExtResource("10_ghd1f")
+region = Rect2(0, 0, 197, 249)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oicmt"]
+atlas = ExtResource("10_ghd1f")
+region = Rect2(197, 0, 197, 249)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg5s2"]
+atlas = ExtResource("10_ghd1f")
+region = Rect2(394, 0, 197, 249)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpimo"]
+atlas = ExtResource("10_ghd1f")
+region = Rect2(591, 0, 197, 249)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfce6"]
+atlas = ExtResource("10_ghd1f")
+region = Rect2(788, 0, 197, 249)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38yei"]
+atlas = ExtResource("10_ghd1f")
+region = Rect2(985, 0, 197, 249)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyj7c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csnyj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oicmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg5s2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpimo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfce6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38yei")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_6x3gy")
@@ -25,42 +81,93 @@ stream = ExtResource("2_81al6")
 [node name="HoverSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_81al6")
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_ln0ng")
+
+[node name="Cloud1" parent="TextureRect2" instance=ExtResource("5_5gtg5")]
+position = Vector2(88, 448)
+reset_offset = 100.0
+
+[node name="Cloud8" parent="TextureRect2" instance=ExtResource("5_5gtg5")]
+position = Vector2(752, -16)
+move_speed = 40.0
+reset_offset = 75.0
+
+[node name="Cloud2" parent="TextureRect2" instance=ExtResource("6_vrt44")]
+position = Vector2(776, 432)
+move_speed = 40.0
+reset_offset = 75.0
+
+[node name="Cloud3" parent="TextureRect2" instance=ExtResource("7_3exk3")]
+position = Vector2(880, 160)
+move_speed = 50.0
+reset_offset = 75.0
+
+[node name="Cloud4" parent="TextureRect2" instance=ExtResource("8_3exk3")]
+position = Vector2(960, 337)
+move_speed = 60.0
+reset_offset = 50.0
+
+[node name="Cloud5" parent="TextureRect2" instance=ExtResource("8_3exk3")]
+position = Vector2(520, 120)
+move_speed = 60.0
+reset_offset = 50.0
+
+[node name="Cloud6" parent="TextureRect2" instance=ExtResource("8_3exk3")]
+position = Vector2(528, 480)
+move_speed = 60.0
+reset_offset = 50.0
+
+[node name="Cloud7" parent="TextureRect2" instance=ExtResource("6_vrt44")]
+position = Vector2(192, 112)
+move_speed = 50.0
+reset_offset = 50.0
+
 [node name="TextureRect" type="TextureRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("1_q3323")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_81al6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect"]
+position = Vector2(605, 529)
+sprite_frames = SubResource("SpriteFrames_qyj7c")
+autoplay = "default"
+frame_progress = 0.0394143
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchor_top = 0.271605
 anchor_right = 0.388889
 anchor_bottom = 0.888889
+offset_top = -17.0
+offset_bottom = -17.0001
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="TextureButton" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = -80.0
-offset_top = -72.0
-offset_right = 560.0
-offset_bottom = 248.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.178571
+anchor_top = -0.1
+anchor_right = 1.25
+anchor_bottom = 0.7
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("5_4lgm7")
+metadata/_edit_use_anchors_ = true
 
 [node name="NewGame" type="TextureButton" parent="Control"]
 custom_minimum_size = Vector2(10, 10)
-layout_mode = 0
-offset_left = 104.0
-offset_top = 183.0
-offset_right = 357.0
-offset_bottom = 250.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.232143
+anchor_top = 0.46
+anchor_right = 0.796875
+anchor_bottom = 0.6275
 size_flags_horizontal = 4
 size_flags_vertical = 6
 texture_normal = ExtResource("2_1ok14")
@@ -68,30 +175,35 @@ texture_pressed = ExtResource("6_6x3gy")
 texture_hover = ExtResource("7_o3lng")
 ignore_texture_size = true
 stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Continue" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 88.0
-offset_top = 243.0
-offset_right = 376.0
-offset_bottom = 343.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.196429
+anchor_top = 0.58
+anchor_right = 0.839285
+anchor_bottom = 0.83
 size_flags_horizontal = 4
 size_flags_vertical = 6
 texture_normal = ExtResource("8_dt86o")
 texture_pressed = ExtResource("9_icksv")
 texture_hover = ExtResource("10_8ufla")
+metadata/_edit_use_anchors_ = true
 
 [node name="Exit" type="TextureButton" parent="Control"]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 315.0
-offset_right = 368.0
-offset_bottom = 415.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.196429
+anchor_top = 0.74
+anchor_right = 0.839285
+anchor_bottom = 0.99
 size_flags_horizontal = 4
 size_flags_vertical = 6
 texture_normal = ExtResource("11_h8l22")
 texture_pressed = ExtResource("12_d0a34")
 texture_hover = ExtResource("13_dn1xl")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="mouse_entered" from="Control/NewGame" to="." method="_on_new_game_mouse_entered"]
 [connection signal="pressed" from="Control/NewGame" to="." method="_on_new_game_pressed"]

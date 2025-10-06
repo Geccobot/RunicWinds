@@ -1,0 +1,126 @@
+[gd_scene load_steps=15 format=3 uid="uid://bqc63hbso1x0b"]
+
+[ext_resource type="Script" uid="uid://smi3baw3hxs" path="res://Scripts/button.gd" id="1_fsia1"]
+[ext_resource type="Texture2D" uid="uid://no37cji5nugq" path="res://Assets - Copy/Sprites/GamePlay/Puzzle/Button.png" id="2_ff8d6"]
+[ext_resource type="AudioStream" uid="uid://b5at54kew4u4o" path="res://Assets - Copy/music/GamePlaySFX/Puzzle/stoneblockdragwoodgrind-82327.mp3" id="3_v4hxl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nry3r"]
+atlas = ExtResource("2_ff8d6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md2rw"]
+atlas = ExtResource("2_ff8d6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r37dq"]
+atlas = ExtResource("2_ff8d6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fqv5"]
+atlas = ExtResource("2_ff8d6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v03k"]
+atlas = ExtResource("2_ff8d6")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghvro"]
+atlas = ExtResource("2_ff8d6")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlt8l"]
+atlas = ExtResource("2_ff8d6")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ej1pe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nry3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md2rw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r37dq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fqv5")
+}],
+"loop": false,
+"name": &"activate",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8v03k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghvro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlt8l")
+}],
+"loop": false,
+"name": &"deactivate",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nry3r")
+}],
+"loop": false,
+"name": &"off",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fqv5")
+}],
+"loop": false,
+"name": &"on",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0igu"]
+size = Vector2(26, 17)
+
+[sub_resource type="Gradient" id="Gradient_fsia1"]
+colors = PackedColorArray(0, 1, 0.972549, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ff8d6"]
+gradient = SubResource("Gradient_fsia1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.8)
+
+[node name="LatchButton" type="Node2D"]
+position = Vector2(0, 14)
+scale = Vector2(2, 2)
+script = ExtResource("1_fsia1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+sprite_frames = SubResource("SpriteFrames_ej1pe")
+animation = &"activate"
+
+[node name="ActivateArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActivateArea"]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_p0igu")
+debug_color = Color(0, 0.7, 0.197273, 0.42)
+
+[node name="activateSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_v4hxl")
+
+[node name="Light" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(-9.53674e-07, 6)
+scale = Vector2(0.664063, 0.664063)
+texture = SubResource("GradientTexture2D_ff8d6")
+
+[connection signal="animation_finished" from="StaticBody2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="ActivateArea" to="." method="_on_activate_area_body_entered"]
+[connection signal="body_exited" from="ActivateArea" to="." method="_on_activate_area_body_exited"]

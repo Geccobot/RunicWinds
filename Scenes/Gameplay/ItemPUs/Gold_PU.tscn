@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://cptrxq30oimcd"]
 
 [ext_resource type="Script" uid="uid://vqlhta5id8q7" path="res://Scenes/Gameplay/ItemPUs/gold_pu.gd" id="1_1a1j8"]
-[ext_resource type="Texture2D" uid="uid://ckj870djvyaog" path="res://Assets/Sprites/UI/Inventory_Menu/Gold.png" id="2_al0nu"]
-[ext_resource type="AudioStream" uid="uid://oy52uppd4u6f" path="res://Assets/music/GamePlaySFX/ItemPUs/coin-donation-3-181411.mp3" id="3_ol50x"]
+[ext_resource type="Texture2D" uid="uid://ckj870djvyaog" path="res://Assets - Copy/Sprites/UI/Inventory_Menu/Gold.png" id="2_al0nu"]
+[ext_resource type="AudioStream" uid="uid://oy52uppd4u6f" path="res://Assets - Copy/music/GamePlaySFX/ItemPUs/coin-donation-3-181411.mp3" id="3_ol50x"]
 
 [sub_resource type="Gradient" id="Gradient_upjjo"]
 colors = PackedColorArray(1, 1, 1, 0.989, 1, 1, 1, 0)

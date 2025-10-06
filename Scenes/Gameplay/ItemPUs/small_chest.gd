@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var small_chest: AnimatedSprite2D = $StaticBody2D/SmallChest
 @onready var open_sfx: AudioStreamPlayer2D = $OpenSFX
+@onready var small_chest: AnimatedSprite2D = $StaticBody2D/SmallChest
 
 @export var item: ItemData
 @export var amount: int = 1

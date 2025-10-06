@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dk55axahbj5pn"
+path="res://.godot/imported/Runic Winds -title theme.wav-417a1fa13b32545810a57b5045f0cdb6.sample"
+
+[deps]
+
+source_file="res://Assets - Copy/music/Runic Winds -title theme.wav"
+dest_files=["res://.godot/imported/Runic Winds -title theme.wav-417a1fa13b32545810a57b5045f0cdb6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

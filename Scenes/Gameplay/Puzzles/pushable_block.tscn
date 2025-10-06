@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvjo3r8wqcvqp"]
+
+[ext_resource type="Script" uid="uid://dy72hkhivs0r8" path="res://Scripts/pushable_block.gd" id="1_s8xmy"]
+[ext_resource type="Texture2D" uid="uid://bofth4rsp80fo" path="res://Assets - Copy/Sprites/GamePlay/Puzzle/Block.png" id="1_tsy2r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xodnh"]
+atlas = ExtResource("1_tsy2r")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1vnn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xodnh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s8xmy"]
+radius = 8.625
+height = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8xmy"]
+size = Vector2(39, 22)
+
+[node name="PushableBlock" type="CharacterBody2D" groups=["button_activators"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_s8xmy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16.5)
+sprite_frames = SubResource("SpriteFrames_k1vnn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8.5)
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_s8xmy")
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, -8.5)
+shape = SubResource("RectangleShape2D_s8xmy")
+debug_color = Color(0, 0.7, 0.175, 0.42)
+
+[connection signal="body_entered" from="InteractArea" to="." method="_on_interact_area_body_entered"]
+[connection signal="body_exited" from="InteractArea" to="." method="_on_interact_area_body_exited"]

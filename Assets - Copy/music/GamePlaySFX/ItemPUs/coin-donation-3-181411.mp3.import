@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://oy52uppd4u6f"
+path="res://.godot/imported/coin-donation-3-181411.mp3-6291eb70b9f5ef84b24fc97a4b5ed231.mp3str"
+
+[deps]
+
+source_file="res://Assets - Copy/music/GamePlaySFX/ItemPUs/coin-donation-3-181411.mp3"
+dest_files=["res://.godot/imported/coin-donation-3-181411.mp3-6291eb70b9f5ef84b24fc97a4b5ed231.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

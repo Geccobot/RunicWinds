@@ -1,11 +1,11 @@
-[gd_scene load_steps=79 format=4 uid="uid://o2yen10i1e3g"]
+[gd_scene load_steps=84 format=4 uid="uid://o2yen10i1e3g"]
 
 [ext_resource type="Script" uid="uid://beo5qnhl488vr" path="res://Scripts/green_veil.gd" id="1_vpr75"]
 [ext_resource type="PackedScene" uid="uid://cu6i6225dwxgf" path="res://Scenes/UI_Scenes/HUD_panel.tscn" id="2_nxgyq"]
 [ext_resource type="PackedScene" uid="uid://c42mqhiptam6b" path="res://Scenes/Global_Scenes/spawn_manager.tscn" id="2_o7x7p"]
 [ext_resource type="Script" uid="uid://d1oa407eyqxve" path="res://Scripts/deepwoodenter_coll.gd" id="3_42m0j"]
 [ext_resource type="Script" uid="uid://ci8x6ol0yuhjr" path="res://Scripts/great_forestenter_coll.gd" id="4_i0njk"]
-[ext_resource type="Texture2D" uid="uid://h8y7ki1y8wds" path="res://Assets/Sprites/Green Veil/Environment/GV_tileset.png" id="5_nxgyq"]
+[ext_resource type="Texture2D" uid="uid://h8y7ki1y8wds" path="res://Assets - Copy/Sprites/Green Veil/Environment/GV_tileset.png" id="5_nxgyq"]
 [ext_resource type="PackedScene" uid="uid://ctunlgexnq1u6" path="res://Player/Scenes/Player.tscn" id="6_o7x7p"]
 [ext_resource type="Script" uid="uid://bymv3f8mdfhal" path="res://Scenes/GreatForest/Areas/house_1_enter_coll.gd" id="6_ve50s"]
 [ext_resource type="Script" uid="uid://dffn7s00wfppp" path="res://Scenes/GreatForest/Areas/black_smith_enter_coll.gd" id="7_7rptx"]
@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://d3m2h4eisu1cg" path="res://Scenes/GreatForest/Flora/Flowers/Flower1.tscn" id="19_jfu0l"]
 [ext_resource type="PackedScene" uid="uid://xtl8smmfb4f4" path="res://Scenes/GreatForest/Flora/Trees/GVTree.tscn" id="20_cnec4"]
 [ext_resource type="PackedScene" uid="uid://c0f50fsj2gs3p" path="res://Scenes/GreatForest/Flora/Branches/branch2.tscn" id="21_2sp1q"]
-[ext_resource type="PackedScene" uid="uid://d2ve3busp38b1" path="res://Scenes/GreatForest/Flora/Grass/grass3.tscn" id="22_ftkew"]
 [ext_resource type="PackedScene" uid="uid://cpv26qjugbsqb" path="res://Scenes/GreatForest/Flora/Flowers/Flower2.tscn" id="23_if3bg"]
 [ext_resource type="PackedScene" uid="uid://dvk7w0ii4m50d" path="res://Scenes/GreatForest/Misc/Decoration.tscn" id="24_nnfqa"]
 [ext_resource type="PackedScene" uid="uid://cwjsv1sxpjddl" path="res://Scenes/GreatForest/Misc/GuildSign.tscn" id="25_3pg5v"]
@@ -52,6 +51,12 @@
 [ext_resource type="PackedScene" uid="uid://d1hjgchi88hv3" path="res://Scenes/GreatForest/Flora/RM/MushR2.tscn" id="42_nxgyq"]
 [ext_resource type="PackedScene" uid="uid://b3uccg7bynxoi" path="res://Scenes/GreatForest/Flora/RM/MushR3.tscn" id="43_o7x7p"]
 [ext_resource type="PackedScene" uid="uid://ixujow6pfv32" path="res://Scenes/GreatForest/Buildings/Castle/CastleWallTower2.tscn" id="44_71ued"]
+[ext_resource type="PackedScene" uid="uid://d0e5bo0qhwyqi" path="res://NPC/Guard_1.tscn" id="53_70qj6"]
+[ext_resource type="PackedScene" uid="uid://c2naig6367o05" path="res://Scenes/Gameplay/Breakables/small_jar.tscn" id="54_fha7j"]
+[ext_resource type="PackedScene" uid="uid://bepjykjjnlvlo" path="res://Scenes/Gameplay/Breakables/TallGrass.tscn" id="55_b8uwr"]
+[ext_resource type="PackedScene" uid="uid://c2ij4raqawfp8" path="res://Scenes/Gameplay/Breakables/large_jar.tscn" id="55_fha7j"]
+[ext_resource type="PackedScene" uid="uid://5quqgmlk87a8" path="res://Scenes/Gameplay/ItemPUs/Small_Chest.tscn" id="56_yo33l"]
+[ext_resource type="Resource" uid="uid://b7dfiqtjfsby5" path="res://Items/windgem.tres" id="57_jfu0l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wxtmi"]
 size = Vector2(87, 20)
@@ -1434,666 +1439,6 @@ position = Vector2(651, 716)
 [node name="Branch13" parent="World_Objects/Branches" instance=ExtResource("12_iwtrd")]
 position = Vector2(1170, -29)
 
-[node name="Grass" type="Node2D" parent="World_Objects"]
-y_sort_enabled = true
-
-[node name="Grass1" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-759, 394)
-
-[node name="Grass2" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-877, 461)
-
-[node name="Grass3" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-760, 357)
-
-[node name="Grass4" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-866, 357)
-
-[node name="Grass5" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-952, 153)
-
-[node name="Grass6" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-738, 119)
-
-[node name="Grass7" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1176, 22)
-
-[node name="Grass8" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-856, -247)
-
-[node name="Grass9" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-1173, -139)
-
-[node name="Grass10" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1246, -23)
-
-[node name="Grass11" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1236, 93)
-
-[node name="Grass12" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-1077, 93)
-
-[node name="Grass13" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-993, 116)
-
-[node name="Grass14" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1024, 115)
-
-[node name="Grass15" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-874, 207)
-
-[node name="Grass16" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-583, 128)
-
-[node name="Grass17" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-543, 127)
-
-[node name="Grass18" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-727, 71)
-
-[node name="Grass19" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-755, 67)
-
-[node name="Grass20" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-910, 69)
-
-[node name="Grass21" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-876, 65)
-
-[node name="Grass22" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-674, -5)
-
-[node name="Grass23" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-780, 160)
-
-[node name="Grass24" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-894, 114)
-
-[node name="Grass25" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-967, -5)
-
-[node name="Grass26" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-276, 217)
-
-[node name="Grass27" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-180, -106)
-
-[node name="Grass28" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(938, -588)
-
-[node name="Grass29" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(614, -595)
-
-[node name="Grass30" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(689, -590)
-
-[node name="Grass31" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(696, -392)
-
-[node name="Grass32" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(673, -446)
-
-[node name="Grass33" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(658, -466)
-
-[node name="Grass34" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(860, -590)
-
-[node name="Grass35" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(778, -590)
-
-[node name="Grass36" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-374, -514)
-
-[node name="Grass37" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-442, -448)
-
-[node name="Grass38" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-481, -487)
-
-[node name="Grass39" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-140, -69)
-
-[node name="Grass40" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-137, -17)
-
-[node name="Grass41" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-109, -438)
-
-[node name="Grass42" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(502, -24)
-
-[node name="Grass43" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(323, 64)
-
-[node name="Grass44" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(485, 65)
-
-[node name="Grass45" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(598, 45)
-
-[node name="Grass46" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(41, -531)
-
-[node name="Grass47" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(244, 45)
-
-[node name="Grass48" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(222, 78)
-
-[node name="Grass49" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(104, 64)
-
-[node name="Grass50" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(98, 80)
-
-[node name="Grass51" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(503, 46)
-
-[node name="Grass52" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(478, -98)
-
-[node name="Grass53" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(598, -100)
-
-[node name="Grass54" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(11, -447)
-
-[node name="Grass55" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-70, 38)
-
-[node name="Grass56" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-190, 57)
-
-[node name="Grass57" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(3, 37)
-
-[node name="Grass58" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(675, 77)
-
-[node name="Grass59" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(643, -265)
-
-[node name="Grass60" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(16, -391)
-
-[node name="Grass62" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(316, 627)
-
-[node name="Grass63" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(157, 604)
-
-[node name="Grass64" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(224, 673)
-
-[node name="Grass65" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(187, 636)
-
-[node name="Grass66" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(421, 623)
-
-[node name="Grass67" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(317, 683)
-
-[node name="Grass68" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(787, 688)
-
-[node name="Grass69" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(834, 672)
-
-[node name="Grass70" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(875, 627)
-
-[node name="Grass71" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(826, 620)
-
-[node name="Grass72" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(880, 468)
-
-[node name="Grass73" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(824, 346)
-
-[node name="Grass74" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(958, 516)
-
-[node name="Grass75" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(957, 537)
-
-[node name="Grass76" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(985, 527)
-
-[node name="Grass77" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(967, 286)
-
-[node name="Grass78" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(952, 312)
-
-[node name="Grass79" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(989, 309)
-
-[node name="Grass80" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(822, 276)
-
-[node name="Grass81" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(868, 234)
-
-[node name="Grass82" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(664, 268)
-
-[node name="Grass83" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(204, 271)
-
-[node name="Grass84" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(211, 217)
-
-[node name="Grass85" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(115, 269)
-
-[node name="Grass86" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(381, 217)
-
-[node name="Grass87" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-336, 281)
-
-[node name="Grass88" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-585, 478)
-
-[node name="Grass89" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-619, 412)
-
-[node name="Grass90" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-813, 468)
-
-[node name="Grass91" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-839, 412)
-
-[node name="Grass92" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1038, 411)
-
-[node name="Grass93" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1024, 426)
-
-[node name="Grass94" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-199, 354)
-
-[node name="Grass95" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-183, 371)
-
-[node name="Grass96" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(17, 314)
-
-[node name="Grass97" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(138, 214)
-
-[node name="Grass98" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(921, -26)
-
-[node name="Grass99" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(853, 28)
-
-[node name="Grass100" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(881, -135)
-
-[node name="Grass101" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(824, -139)
-
-[node name="Grass102" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(1105, -44)
-
-[node name="Grass103" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(1235, -135)
-
-[node name="Grass104" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(1294, -131)
-
-[node name="Grass105" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(1391, -150)
-
-[node name="Grass106" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(1194, 324)
-
-[node name="Grass107" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(1331, 258)
-
-[node name="Grass108" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(1150, 641)
-
-[node name="Grass109" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(1152, 562)
-
-[node name="Grass110" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(1209, 420)
-
-[node name="Grass111" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(1011, 620)
-
-[node name="Grass112" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(307, 134)
-
-[node name="Grass113" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(413, 147)
-
-[node name="Grass114" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(695, -302)
-
-[node name="Grass115" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(815, -300)
-
-[node name="Grass116" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(999, -495)
-
-[node name="Grass117" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(773, -519)
-
-[node name="Grass118" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-266, -322)
-
-[node name="Grass119" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-328, -10)
-
-[node name="Grass120" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-391, -188)
-
-[node name="Grass121" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-286, -171)
-
-[node name="Grass122" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-382, -349)
-
-[node name="Grass123" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-395, -314)
-
-[node name="Grass124" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-337, 50)
-
-[node name="Grass125" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-332, 222)
-
-[node name="Grass126" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(47, 389)
-
-[node name="Grass127" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-22, 490)
-
-[node name="Grass128" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-55, 492)
-
-[node name="Grass129" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-38, 513)
-
-[node name="Grass130" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-449, 520)
-
-[node name="Grass131" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-758, 641)
-
-[node name="Grass132" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-902, 625)
-
-[node name="Grass133" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-539, 614)
-
-[node name="Grass134" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1155, 490)
-
-[node name="Grass135" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1048, 543)
-
-[node name="Grass136" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-1192, 444)
-
-[node name="Grass137" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1225, 362)
-
-[node name="Grass138" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(34, 158)
-
-[node name="Grass139" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(20, 182)
-
-[node name="Node2D" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-251, 422)
-
-[node name="Node2D2" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-75, 384)
-
-[node name="Node2D3" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-184, 465)
-
-[node name="Node2D4" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-417, 481)
-
-[node name="Node2D5" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-397, 406)
-
-[node name="Node2D6" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-334, 410)
-
-[node name="Node2D7" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1071, 573)
-
-[node name="Node2D8" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-1255, 461)
-
-[node name="Node2D9" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(76, 587)
-
-[node name="Node2D10" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(254, 757)
-
-[node name="Node2D11" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(423, 592)
-
-[node name="Node2D12" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(480, 571)
-
-[node name="Node2D13" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(516, 605)
-
-[node name="Node2D14" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(660, 582)
-
-[node name="Node2D15" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(663, 561)
-
-[node name="Node2D16" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(878, 369)
-
-[node name="Node2D17" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(911, 511)
-
-[node name="Node2D18" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(296, 217)
-
-[node name="Node2D19" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(596, 194)
-
-[node name="Node2D20" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(567, 94)
-
-[node name="Node2D21" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(514, 97)
-
-[node name="Node2D22" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(662, 167)
-
-[node name="Node2D23" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(933, -46)
-
-[node name="Node2D24" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(1040, -42)
-
-[node name="Node2D25" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(982, -44)
-
-[node name="Node2D26" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(947, -153)
-
-[node name="Node2D27" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(663, -131)
-
-[node name="Node2D28" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(740, -271)
-
-[node name="Node2D29" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(826, -378)
-
-[node name="Node2D30" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(986, -408)
-
-[node name="Node2D31" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(646, -562)
-
-[node name="Node2D33" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(388, -624)
-
-[node name="Node2D34" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(747, -425)
-
-[node name="Node2D35" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-392, -249)
-
-[node name="Node2D36" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-392, -7)
-
-[node name="Node2D37" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-337, -100)
-
-[node name="Node2D38" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-428, -156)
-
-[node name="Node2D39" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-516, 398)
-
-[node name="Node2D40" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-552, 399)
-
-[node name="Node2D41" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-210, 413)
-
-[node name="Node2D42" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(79, 633)
-
-[node name="Node2D43" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(229, 475)
-
-[node name="Node2D44" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(221, 554)
-
-[node name="Node2D45" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(813, 465)
-
-[node name="Node2D46" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(786, 416)
-
-[node name="Node2D47" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(906, 324)
-
-[node name="Node2D48" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(1014, 266)
-
-[node name="Node2D49" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(492, 226)
-
-[node name="Node2D50" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(533, 183)
-
-[node name="Node2D51" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(205, 167)
-
-[node name="Node2D52" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(151, 126)
-
-[node name="Node2D53" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-117, 37)
-
-[node name="Node2D54" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-393, -576)
-
-[node name="Node2D55" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-291, -610)
-
-[node name="Node2D56" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-228, -613)
-
-[node name="Node2D57" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-37, -592)
-
-[node name="Node2D58" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-121, -556)
-
-[node name="Node2D59" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-248, -535)
-
-[node name="Node2D60" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-165, -625)
-
-[node name="Node2D62" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-163, -764)
-
-[node name="Node2D63" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-273, -731)
-
-[node name="Node2D64" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(155, -787)
-
-[node name="Node2D65" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(96, -775)
-
-[node name="Node2D66" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-720, -598)
-
-[node name="Node2D67" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-812, -480)
-
-[node name="Node2D68" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1036, -314)
-
-[node name="Node2D69" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-1232, -233)
-
-[node name="Node2D70" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1092, -314)
-
-[node name="Node2D71" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1324, -83)
-
-[node name="Node2D72" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1316, 239)
-
-[node name="Node2D73" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-1313, 336)
-
-[node name="Node2D74" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1361, 449)
-
-[node name="Node2D75" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-1318, 461)
-
-[node name="Node2D76" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1254, 654)
-
-[node name="Node2D77" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(-1091, 684)
-
-[node name="Node2D78" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-1219, 654)
-
-[node name="Node2D79" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(-971, 549)
-
-[node name="Node2D80" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(-929, 569)
-
-[node name="Node2D81" parent="World_Objects/Grass" instance=ExtResource("17_b8uwr")]
-position = Vector2(851, -472)
-
-[node name="Node2D82" parent="World_Objects/Grass" instance=ExtResource("18_yo33l")]
-position = Vector2(866, -531)
-
-[node name="Node2D83" parent="World_Objects/Grass" instance=ExtResource("22_ftkew")]
-position = Vector2(955, -530)
-
 [node name="Bushs" type="Node2D" parent="World_Objects"]
 y_sort_enabled = true
 
@@ -2236,7 +1581,7 @@ position = Vector2(478, -625)
 position = Vector2(562, -610)
 
 [node name="Bush51" parent="World_Objects/Bushs" instance=ExtResource("13_5ntva")]
-position = Vector2(220, -88)
+position = Vector2(222, -90)
 
 [node name="Bush52" parent="World_Objects/Bushs" instance=ExtResource("13_5ntva")]
 position = Vector2(126, -88)
@@ -2276,7 +1621,7 @@ position = Vector2(231, -396)
 
 [node name="Bush64" parent="World_Objects/Bushs" instance=ExtResource("21_2sp1q")]
 y_sort_enabled = true
-position = Vector2(289, -553)
+position = Vector2(300, -569)
 rotation = 1.06404
 
 [node name="Bush65" parent="World_Objects/Bushs" instance=ExtResource("15_7ij4i")]
@@ -2844,7 +2189,7 @@ position = Vector2(-1014, 25)
 position = Vector2(-624, 22)
 
 [node name="Decoration4" parent="World_Objects/Misc" instance=ExtResource("24_nnfqa")]
-position = Vector2(177, -59)
+position = Vector2(173, -58)
 
 [node name="GuildSign" parent="World_Objects/Misc" instance=ExtResource("25_3pg5v")]
 z_index = 1
@@ -3521,6 +2866,281 @@ position = Vector2(878, -760)
 [node name="WayPoint" parent="World_Objects" instance=ExtResource("8_o7x7p")]
 position = Vector2(854, -41)
 waypoint_id = "GreenVeilWP"
+
+[node name="NPC" type="Node2D" parent="World_Objects"]
+y_sort_enabled = true
+
+[node name="Guard1" parent="World_Objects" instance=ExtResource("53_70qj6")]
+position = Vector2(1052, -109)
+timeline_name = "GV_Guard_1"
+
+[node name="Breakables" type="Node2D" parent="World_Objects"]
+y_sort_enabled = true
+
+[node name="SmallJar" parent="World_Objects/Breakables" instance=ExtResource("54_fha7j")]
+position = Vector2(966, -122)
+
+[node name="TallGrass" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(700, -114)
+
+[node name="TallGrass2" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(719, -114)
+
+[node name="TallGrass3" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(737, -114)
+
+[node name="TallGrass4" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(782, -114)
+
+[node name="TallGrass5" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(618, -59)
+
+[node name="TallGrass6" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(618, -44)
+
+[node name="TallGrass7" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(618, -27)
+
+[node name="TallGrass8" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(618, -9)
+
+[node name="TallGrass9" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(603, -363)
+
+[node name="TallGrass10" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(613, -354)
+
+[node name="TallGrass11" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(586, -350)
+
+[node name="TallGrass12" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(806, -416)
+
+[node name="TallGrass13" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(797, -406)
+
+[node name="TallGrass14" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(787, -416)
+
+[node name="TallGrass15" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(735, -458)
+
+[node name="TallGrass16" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(751, -451)
+
+[node name="TallGrass17" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(845, -571)
+
+[node name="TallGrass18" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(835, -555)
+
+[node name="TallGrass19" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(859, -556)
+
+[node name="TallGrass20" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(281, 232)
+
+[node name="TallGrass21" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(303, 233)
+
+[node name="TallGrass22" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-14, 291)
+
+[node name="TallGrass23" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(8, 291)
+
+[node name="TallGrass24" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-4, 307)
+
+[node name="TallGrass25" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(229, 507)
+
+[node name="TallGrass26" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(134, 492)
+
+[node name="TallGrass27" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(156, 626)
+
+[node name="TallGrass28" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(182, 653)
+
+[node name="TallGrass29" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(452, 616)
+
+[node name="TallGrass30" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(511, 616)
+
+[node name="TallGrass31" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(896, 518)
+
+[node name="TallGrass32" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(896, 545)
+
+[node name="TallGrass33" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(894, 569)
+
+[node name="TallGrass34" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(889, 385)
+
+[node name="TallGrass35" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(811, 482)
+
+[node name="TallGrass36" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(887, 400)
+
+[node name="TallGrass37" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(465, 285)
+
+[node name="TallGrass38" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(493, 285)
+
+[node name="TallGrass39" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(521, 284)
+
+[node name="TallGrass40" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-420, 418)
+
+[node name="TallGrass41" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-448, 413)
+
+[node name="TallGrass42" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-439, 424)
+
+[node name="TallGrass43" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-331, 299)
+
+[node name="TallGrass44" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-330, 315)
+
+[node name="TallGrass45" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-317, 290)
+
+[node name="TallGrass46" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-1022, 430)
+
+[node name="TallGrass47" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-1030, 440)
+
+[node name="TallGrass48" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-1013, 438)
+
+[node name="TallGrass49" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-778, 392)
+
+[node name="TallGrass50" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-765, 405)
+
+[node name="TallGrass51" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-751, 418)
+
+[node name="TallGrass52" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-833, 444)
+
+[node name="TallGrass53" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-833, 456)
+
+[node name="TallGrass54" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-829, 469)
+
+[node name="TallGrass55" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-850, 458)
+
+[node name="TallGrass56" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-857, 100)
+
+[node name="TallGrass57" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-856, 115)
+
+[node name="TallGrass58" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-878, 113)
+
+[node name="TallGrass59" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-752, 141)
+
+[node name="TallGrass60" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-763, 158)
+
+[node name="TallGrass61" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-778, 143)
+
+[node name="SmallJar2" parent="World_Objects/Breakables" instance=ExtResource("54_fha7j")]
+position = Vector2(-766, 74)
+
+[node name="SmallJar3" parent="World_Objects/Breakables" instance=ExtResource("54_fha7j")]
+position = Vector2(-869, 75)
+
+[node name="LargeJar" parent="World_Objects/Breakables" instance=ExtResource("55_fha7j")]
+position = Vector2(-905, 70)
+
+[node name="LargeJar2" parent="World_Objects/Breakables" instance=ExtResource("55_fha7j")]
+position = Vector2(57, 404)
+
+[node name="SmallJar4" parent="World_Objects/Breakables" instance=ExtResource("54_fha7j")]
+position = Vector2(-587, 393)
+
+[node name="SmallJar5" parent="World_Objects/Breakables" instance=ExtResource("54_fha7j")]
+position = Vector2(-552, 394)
+
+[node name="TallGrass62" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-597, 419)
+
+[node name="TallGrass63" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-571, 421)
+
+[node name="TallGrass64" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-544, 420)
+
+[node name="SmallJar6" parent="World_Objects/Breakables" instance=ExtResource("54_fha7j")]
+position = Vector2(105, -51)
+
+[node name="SmallJar7" parent="World_Objects/Breakables" instance=ExtResource("54_fha7j")]
+position = Vector2(113, -39)
+
+[node name="LargeJar3" parent="World_Objects/Breakables" instance=ExtResource("55_fha7j")]
+position = Vector2(258, -88)
+
+[node name="LargeJar4" parent="World_Objects/Breakables" instance=ExtResource("55_fha7j")]
+position = Vector2(293, -87)
+
+[node name="TallGrass65" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-188, -380)
+
+[node name="TallGrass66" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-211, -380)
+
+[node name="TallGrass67" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-233, -380)
+
+[node name="TallGrass68" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-346, -360)
+
+[node name="TallGrass69" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-342, -344)
+
+[node name="TallGrass70" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-369, -350)
+
+[node name="TallGrass71" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-340, -221)
+
+[node name="TallGrass72" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-362, -217)
+
+[node name="TallGrass73" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-355, -202)
+
+[node name="SmallJar8" parent="World_Objects/Breakables" instance=ExtResource("54_fha7j")]
+position = Vector2(-496, -277)
+
+[node name="TallGrass74" parent="World_Objects/Breakables" instance=ExtResource("55_b8uwr")]
+position = Vector2(-409, -264)
+
+[node name="PU\'s" type="Node2D" parent="World_Objects"]
+y_sort_enabled = true
+
+[node name="SmallChest" parent="World_Objects/PU\'s" instance=ExtResource("56_yo33l")]
+position = Vector2(360, -617)
+item = ExtResource("57_jfu0l")
 
 [node name="World_Collision" type="Node" parent="."]
 

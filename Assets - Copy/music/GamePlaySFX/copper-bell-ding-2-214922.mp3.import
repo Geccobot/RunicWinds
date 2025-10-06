@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4f0fh0oscj6c"
+path="res://.godot/imported/copper-bell-ding-2-214922.mp3-0303293b98a59a220d5eea1440dd2bb8.mp3str"
+
+[deps]
+
+source_file="res://Assets - Copy/music/GamePlaySFX/copper-bell-ding-2-214922.mp3"
+dest_files=["res://.godot/imported/copper-bell-ding-2-214922.mp3-0303293b98a59a220d5eea1440dd2bb8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

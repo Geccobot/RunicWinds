@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=3 uid="uid://cicli8htse4wm"]
+
+[ext_resource type="Script" uid="uid://dvkp31nfoclam" path="res://Scripts/iron_bars.gd" id="1_2vg08"]
+[ext_resource type="Texture2D" uid="uid://cunh35ryqpbx" path="res://Assets - Copy/Sprites/GamePlay/Puzzle/Bars.png" id="2_bnetj"]
+[ext_resource type="AudioStream" uid="uid://cdot062kx4smn" path="res://Assets - Copy/music/GamePlaySFX/Puzzle/iron-bang-119810.mp3" id="3_bnetj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2mle"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8y06"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxsyo"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dggyx"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g28r2"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(192, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mexjr"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvuci"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysr8e"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvsb0"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su0xr"]
+atlas = ExtResource("2_bnetj")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61cmx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2mle")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8y06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxsyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dggyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g28r2")
+}],
+"loop": false,
+"name": &"close",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mexjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvuci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysr8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvsb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_su0xr")
+}],
+"loop": false,
+"name": &"open",
+"speed": 6.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"opened",
+"speed": 0.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brquw"]
+size = Vector2(26, 4.5)
+
+[node name="ironBars" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_2vg08")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="IronBars" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(0, -21.5)
+sprite_frames = SubResource("SpriteFrames_61cmx")
+animation = &"open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_brquw")
+
+[node name="IronBarsSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bnetj")
+pitch_scale = 0.64

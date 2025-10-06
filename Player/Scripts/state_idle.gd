@@ -5,6 +5,7 @@ class_name State_Idle extends State
 @onready var run: State_Run = $"../run"
 @onready var dash: Node = $"../dash"
 @onready var heal: State_Heal = $"../heal"
+@onready var dialogue: State_Dialogue = $"../dialogue"
 
 var magic_cursor = load("res://Assets/Sprites/GamePlay/Cursor.png")
 
@@ -35,5 +36,7 @@ func HandleInput(event: InputEvent) -> State:
 		return attack
 	if event.is_action_pressed("Dash"):
 		return dash   # assuming you `@onready var dash: State_Dash = $"../dash"`
-
+	if event.is_action_pressed("Interact") and player.interactable and player.interactable.is_in_group("NPC"):
+		player.interactable.interact()
+		return dialogue
 	return null

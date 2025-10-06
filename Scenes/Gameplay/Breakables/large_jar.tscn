@@ -1,0 +1,141 @@
+[gd_scene load_steps=21 format=3 uid="uid://c2ij4raqawfp8"]
+
+[ext_resource type="Script" uid="uid://b8rjkhevwopot" path="res://Player/Scripts/resources.gd" id="1_ykq8t"]
+[ext_resource type="Script" uid="uid://bqkd1gfx0nqjb" path="res://Player/Scripts/combat.gd" id="2_v3jj3"]
+[ext_resource type="Script" uid="uid://r64b460xwopc" path="res://Player/Scripts/stats.gd" id="3_p38ev"]
+[ext_resource type="Script" uid="uid://8j4hqth3jtld" path="res://Scripts/ItemDrop.gd" id="4_7p8ny"]
+[ext_resource type="Script" uid="uid://jp44gbkgwwnq" path="res://Scripts/Combat/Hurtbox.gd" id="4_bnx6f"]
+[ext_resource type="Script" uid="uid://cuv5lg4um40ro" path="res://item_data.gd" id="5_bgq2n"]
+[ext_resource type="Texture2D" uid="uid://cqnv2y77ngiy6" path="res://Assets/Sprites/GamePlay/Breakables/LargePot.png" id="5_ykq8t"]
+[ext_resource type="AudioStream" uid="uid://cj6kwms4ymyem" path="res://Assets/music/GamePlaySFX/bottle-break-39916.mp3" id="6_7p8ny"]
+[ext_resource type="Resource" uid="uid://dy8v0kp4ivdaf" path="res://Items/smallmanacrystal.tres" id="6_o8pg3"]
+[ext_resource type="PackedScene" uid="uid://cptrxq30oimcd" path="res://Scenes/Gameplay/ItemPUs/Gold_PU.tscn" id="7_mt8qt"]
+[ext_resource type="PackedScene" uid="uid://dsgsm50khqql4" path="res://Scenes/Gameplay/ItemPUs/Item_PU.tscn" id="8_upvls"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2f1tv"]
+radius = 5.66667
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hgibt"]
+radius = 11.3774
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3jj3"]
+atlas = ExtResource("5_ykq8t")
+region = Rect2(0, 0, 32, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p38ev"]
+atlas = ExtResource("5_ykq8t")
+region = Rect2(32, 0, 32, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnx6f"]
+atlas = ExtResource("5_ykq8t")
+region = Rect2(64, 0, 32, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ot033"]
+atlas = ExtResource("5_ykq8t")
+region = Rect2(96, 0, 32, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7p8ny"]
+atlas = ExtResource("5_ykq8t")
+region = Rect2(128, 0, 32, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgq2n"]
+atlas = ExtResource("5_ykq8t")
+region = Rect2(160, 0, 32, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_btwqn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3jj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p38ev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnx6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ot033")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7p8ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgq2n")
+}],
+"loop": false,
+"name": &"death",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3jj3")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 0.0
+}]
+
+[node name="LargeJar" type="Node2D" groups=["Enemies"]]
+scale = Vector2(1.5, 1.5)
+
+[node name="Resources" type="Node" parent="."]
+script = ExtResource("1_ykq8t")
+max_health = 1
+health = 1
+max_stamina = 0
+stamina = 0
+stamina_regen_rate = 0
+stamina_regen_delay = 0.0
+max_mana = 0
+mana = 0
+mana_regen_amount = 0
+mana_regen_interval = 0.0
+
+[node name="Combat" type="Node" parent="."]
+script = ExtResource("2_v3jj3")
+sprite_path = NodePath("../AnimatedSprite2D")
+death_sound = NodePath("../AudioStreamPlayer2D")
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("3_p38ev")
+str = 0
+dex = 0
+vit = 0
+wis = 0
+skl = 0
+
+[node name="ItemDrop" type="Node" parent="."]
+script = ExtResource("4_7p8ny")
+gold_amount = 10
+item_drop_chance = 0.5
+possible_items = Array[ExtResource("5_bgq2n")]([ExtResource("6_o8pg3")])
+gold_pickup_scene = ExtResource("7_mt8qt")
+item_pickup_scene = ExtResource("8_upvls")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+script = ExtResource("4_bnx6f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, -4)
+rotation = 9.42476
+scale = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_2f1tv")
+debug_color = Color(0.787689, 0.41818, 0.289295, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -3)
+shape = SubResource("CircleShape2D_hgibt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_btwqn")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_7p8ny")
+pitch_scale = 0.54

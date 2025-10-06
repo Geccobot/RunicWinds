@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0xb1s7wdypm3"
+path="res://.godot/imported/wind-magic-1-378628.mp3-fef08bfd9d5ade7925d140e2a2ccd05a.mp3str"
+
+[deps]
+
+source_file="res://Assets - Copy/music/AttackSFX/wind-magic-1-378628.mp3"
+dest_files=["res://.godot/imported/wind-magic-1-378628.mp3-fef08bfd9d5ade7925d140e2a2ccd05a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

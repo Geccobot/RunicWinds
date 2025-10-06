@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtek0owq62m5g"]
 
-[ext_resource type="Texture2D" uid="uid://0mpbeb63bf48" path="res://Assets/Sprites/Green Veil/Environment/GV_interior_items.png" id="1_u57k3"]
+[ext_resource type="Texture2D" uid="uid://0mpbeb63bf48" path="res://Assets - Copy/Sprites/Green Veil/Environment/GV_interior_items.png" id="1_u57k3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u57k3"]
 atlas = ExtResource("1_u57k3")
